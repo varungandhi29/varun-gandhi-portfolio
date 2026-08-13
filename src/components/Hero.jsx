@@ -5,7 +5,6 @@ import { ArrowDown, Shield, FileText, Mail, MapPin, GraduationCap } from 'lucide
 export default function Hero() {
   const canvasRef = useRef(null);
 
-  // Smooth background particle canvas
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -53,7 +52,7 @@ export default function Hero() {
 
         ctx.beginPath();
         ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(59, 130, 246, 0.35)';
+        ctx.fillStyle = 'rgba(37, 99, 235, 0.25)';
         ctx.fill();
 
         for (let j = i + 1; j < particles.length; j++) {
@@ -66,7 +65,7 @@ export default function Hero() {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - dist / 110)})`;
+            ctx.strokeStyle = `rgba(37, 99, 235, ${0.08 * (1 - dist / 110)})`;
             ctx.lineWidth = 0.75;
             ctx.stroke();
           }
@@ -85,7 +84,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[85vh] pt-36 pb-24 flex items-center justify-center overflow-hidden bg-enterprise-mesh">
+    <section className="relative min-h-[85vh] pt-36 pb-24 flex items-center justify-center overflow-hidden bg-light-mesh">
       {/* Background Canvas */}
       <canvas
         ref={canvasRef}
@@ -100,9 +99,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cobalt-950/80 border border-cobalt-500/30 text-cobalt-400 font-medium text-xs shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-semibold text-xs shadow-sm"
           >
-            <Shield className="w-4 h-4 text-cobalt-400" />
+            <Shield className="w-4 h-4 text-blue-600" />
             <span>Aspiring Cybersecurity Engineer · Cloud Security Focus</span>
           </motion.div>
 
@@ -111,7 +110,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.05 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]"
+            className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1]"
           >
             Varun Gandhi
           </motion.h1>
@@ -121,7 +120,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="text-xl sm:text-2xl font-semibold text-slate-300 max-w-3xl"
+            className="text-xl sm:text-2xl font-bold text-slate-700 max-w-3xl"
           >
             Building Deception Platforms, IAM Audit Tools & Cloud Security Labs
           </motion.p>
@@ -131,7 +130,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.15 }}
-            className="text-base text-slate-400 leading-relaxed max-w-2xl font-normal"
+            className="text-base text-slate-600 leading-relaxed max-w-2xl font-normal"
           >
             Final-year B.Tech IT student at Parul University, Vadodara, graduating May 2027. 
             Long-term goal: return to India as a Cloud Security Engineer focused on fintech, banking, and government sector security.
@@ -142,14 +141,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-300 font-medium"
+            className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-700 font-medium"
           >
-            <div className="flex items-center gap-2 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
-              <MapPin className="w-4 h-4 text-cobalt-400" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+              <MapPin className="w-4 h-4 text-blue-600" />
               <span>Vadodara, Gujarat, India</span>
             </div>
-            <div className="flex items-center gap-2 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
-              <GraduationCap className="w-4 h-4 text-emerald-400" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+              <GraduationCap className="w-4 h-4 text-emerald-600" />
               <span>Parul University B.Tech IT '27</span>
             </div>
           </motion.div>
@@ -175,15 +174,15 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn-secondary text-xs px-6 py-3 rounded-xl flex items-center gap-2 focus:outline-none"
             >
-              <FileText className="w-4 h-4 text-cobalt-400" />
+              <FileText className="w-4 h-4 text-blue-600" />
               <span>Download Resume</span>
             </a>
 
             <a
               href="#contact"
-              className="text-xs font-semibold text-emerald-400 bg-emerald-950/50 hover:bg-emerald-900/50 border border-emerald-500/40 hover:border-emerald-400 px-6 py-3 rounded-xl transition-all flex items-center gap-2 focus:outline-none"
+              className="text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 px-6 py-3 rounded-xl transition-all flex items-center gap-2 focus:outline-none shadow-sm"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4 text-emerald-600" />
               <span>Contact</span>
             </a>
           </motion.div>
@@ -194,14 +193,14 @@ export default function Hero() {
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
         <a
           href="#stats"
-          className="text-slate-400 hover:text-cobalt-400 transition-colors p-2"
+          className="text-slate-400 hover:text-blue-600 transition-colors p-2"
           aria-label="Scroll down"
         >
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
           >
-            <ArrowDown className="w-4 h-4 text-cobalt-400" />
+            <ArrowDown className="w-4 h-4 text-blue-600" />
           </motion.div>
         </a>
       </div>

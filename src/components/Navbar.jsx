@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#070b14]/90 backdrop-blur-xl border-b border-slate-800/80 shadow-lg py-3.5' 
+        ? 'bg-white/90 backdrop-blur-xl border-b border-slate-200/90 shadow-sm py-3.5' 
         : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,18 +33,18 @@ export default function Navbar() {
           
           {/* Brand Logo & Name */}
           <a href="#" className="flex items-center gap-3.5 group focus:outline-none">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cobalt-600/30 to-cobalt-950/80 border border-cobalt-500/40 flex items-center justify-center text-cobalt-400 group-hover:border-cobalt-400 transition-all shadow-sm">
+            <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 group-hover:border-blue-500 group-hover:bg-blue-100 transition-all shadow-sm">
               <Shield className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-base font-bold text-slate-100 tracking-tight flex items-center gap-2.5">
+              <div className="text-base font-bold text-slate-900 tracking-tight flex items-center gap-2.5">
                 Varun Gandhi
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-950/80 text-emerald-400 border border-emerald-500/30">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5"></span>
                   Open to Roles
                 </span>
               </div>
-              <p className="text-xs text-slate-400 font-normal hidden sm:block">
+              <p className="text-xs text-slate-500 font-normal hidden sm:block">
                 Aspiring Cloud Security Engineer
               </p>
             </div>
@@ -56,7 +56,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-cobalt-400 transition-colors focus:outline-none"
+                className="text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors focus:outline-none"
               >
                 {link.name}
               </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
               href="/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-xs px-4 py-2 rounded-lg flex items-center gap-1.5 focus:outline-none"
+              className="btn-primary text-xs px-4 py-2 rounded-xl flex items-center gap-1.5 focus:outline-none"
             >
               <span>Resume</span>
               <ExternalLink className="w-3.5 h-3.5" />
@@ -76,7 +76,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-cobalt-400 focus:outline-none"
+            className="md:hidden p-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-blue-600 focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -86,13 +86,13 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#070b14]/95 backdrop-blur-xl border-b border-slate-800 px-4 pt-4 pb-6 space-y-3">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-4 pt-4 pb-6 space-y-3 shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm font-medium text-slate-300 hover:text-cobalt-400 py-2 border-b border-slate-800/50"
+              className="block text-sm font-medium text-slate-700 hover:text-blue-600 py-2 border-b border-slate-100"
             >
               {link.name}
             </a>
@@ -102,7 +102,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
-            className="mt-4 w-full btn-primary text-xs text-center py-2.5 rounded-lg flex items-center justify-center gap-2"
+            className="mt-4 w-full btn-primary text-xs text-center py-2.5 rounded-xl flex items-center justify-center gap-2"
           >
             <span>Download Resume (.PDF)</span>
             <ExternalLink className="w-3.5 h-3.5" />
