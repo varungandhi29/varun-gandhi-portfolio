@@ -34,19 +34,19 @@ export default function Writeups() {
   ];
 
   return (
-    <section id="writeups" className="py-24 relative bg-tech-alt border-t border-[#334155]/60">
+    <section id="writeups" className="py-24 relative bg-tech-alt border-t border-[#D6CFB5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#f59e0b] bg-[#1e293b] px-3 py-1 rounded-full border border-[#334155] mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D97706] bg-[#FDFBF7] px-3 py-1 rounded-full border border-[#D6CFB5] mb-3 shadow-sm font-bold">
             <BookOpen className="w-3.5 h-3.5" />
             <span>TECHNICAL_WRITEUPS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f8fafc] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
             Security Writeups & Research Notes
           </h2>
-          <p className="text-xs text-[#cbd5e1] font-sans mt-2 max-w-2xl">
+          <p className="text-xs text-[#334155] font-sans mt-2 max-w-2xl font-medium">
             Compact technical notes on cloud security evaluation, deception architecture, and vulnerability analysis.
           </p>
         </div>
@@ -64,25 +64,25 @@ export default function Writeups() {
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono">
-                  <span className="text-[#f59e0b] font-semibold">{item.badge}</span>
-                  <span className="text-[#94a3b8]">{item.date}</span>
+                  <span className="text-[#D97706] font-bold">{item.badge}</span>
+                  <span className="text-[#64748B]">{item.date}</span>
                 </div>
 
-                <h3 className="text-base font-bold text-[#f8fafc] group-hover:text-[#38bdf8] transition-colors leading-snug">
+                <h3 className="text-base font-bold text-[#0F172A] group-hover:text-[#0D9488] transition-colors leading-snug">
                   {item.title}
                 </h3>
 
-                <p className="text-xs text-[#cbd5e1] font-sans leading-relaxed">
+                <p className="text-xs text-[#334155] font-sans leading-relaxed">
                   {item.summary}
                 </p>
               </div>
 
-              <div className="space-y-3 pt-3 border-t border-[#334155]/60">
+              <div className="space-y-3 pt-3 border-t border-[#D6CFB5]">
                 <div className="flex flex-wrap gap-1">
                   {item.topics.map((t) => (
                     <span
                       key={t}
-                      className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0f172a] text-[#cbd5e1] border border-[#334155]"
+                      className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-[#F6F3E7] text-[#0F172A] border border-[#D6CFB5]"
                     >
                       {t}
                     </span>
@@ -91,7 +91,7 @@ export default function Writeups() {
 
                 <a
                   href="#projects"
-                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#38bdf8] hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#0D9488] hover:underline"
                 >
                   <span>{item.linkText}</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

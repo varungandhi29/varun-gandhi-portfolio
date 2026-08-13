@@ -7,39 +7,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: {
-          base: '#0f172a',
-          card: '#1e293b',
-          elevated: '#172033',
-          border: '#334155',
-          borderGlow: 'rgba(56, 189, 248, 0.25)',
+        parchment: {
+          base: '#EDE8D0',
+          surface: '#F6F3E7',
+          card: '#FDFBF7',
+          border: '#D6CFB5',
+          borderHover: '#0D9488',
         },
-        cyanGlow: {
-          primary: '#38bdf8',
-          teal: '#2dd4bf',
-          light: '#7dd3fc',
+        teal: {
+          accent: '#0D9488',
+          dark: '#0F766E',
+          glow: 'rgba(13, 148, 136, 0.12)',
         },
-        amberGlow: {
-          primary: '#f59e0b',
-          gold: '#fbbf24',
+        amber: {
+          accent: '#D97706',
+          dark: '#B45309',
         },
         slateText: {
-          heading: '#f8fafc',
-          body: '#cbd5e1',
-          muted: '#94a3b8',
+          primary: '#0F172A',
+          body: '#334155',
+          muted: '#64748B',
         },
-        emerald: {
-          status: '#34d399',
+        status: {
+          green: '#15803D',
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         heading: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
-      },
-      backgroundImage: {
-        'hero-radial': 'radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0) 70%)',
-        'card-gradient': 'linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(23, 32, 51, 0.95) 100%)',
       }
     },
   },

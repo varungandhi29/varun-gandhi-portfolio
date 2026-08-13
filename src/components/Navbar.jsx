@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#0f172a]/90 backdrop-blur-xl border-b border-[#334155]/60 shadow-xl py-3.5' 
+        ? 'bg-[#EDE8D0]/95 backdrop-blur-xl border-b border-[#D6CFB5] shadow-md py-3.5' 
         : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,18 +34,18 @@ export default function Navbar() {
           
           {/* Brand Logo & Name */}
           <a href="#" className="flex items-center gap-3.5 group focus:outline-none">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1e293b] to-[#172033] border border-[#334155] flex items-center justify-center text-[#38bdf8] group-hover:border-[#38bdf8]/60 transition-all shadow-md">
+            <div className="w-10 h-10 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] flex items-center justify-center text-[#0D9488] group-hover:border-[#0D9488] transition-all shadow-sm">
               <Shield className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-base font-bold text-[#f8fafc] tracking-tight flex items-center gap-2.5">
+              <div className="text-base font-bold text-[#0F172A] tracking-tight flex items-center gap-2.5">
                 Varun Gandhi
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-[#1e293b] text-[#34d399] border border-[#34d399]/40 shadow-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#34d399] animate-pulse mr-1.5"></span>
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-[#FDFBF7] text-[#15803D] border border-[#15803D]/40 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#15803D] animate-pulse mr-1.5"></span>
                   Open to Roles
                 </span>
               </div>
-              <p className="text-xs text-[#94a3b8] font-mono hidden sm:block">
+              <p className="text-xs text-[#64748B] font-mono hidden sm:block font-medium">
                 Aspiring Cloud Security Engineer
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-[#cbd5e1] hover:text-[#38bdf8] transition-colors focus:outline-none"
+                className="text-sm font-semibold text-[#334155] hover:text-[#0D9488] transition-colors focus:outline-none"
               >
                 {link.name}
               </a>
@@ -77,7 +77,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl bg-[#1e293b] border border-[#334155] text-[#cbd5e1] hover:text-[#38bdf8] focus:outline-none"
+            className="md:hidden p-2 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#334155] hover:text-[#0D9488] focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -87,13 +87,13 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0f172a]/98 backdrop-blur-xl border-b border-[#334155] px-4 pt-4 pb-6 space-y-3 shadow-2xl">
+        <div className="md:hidden bg-[#EDE8D0]/98 backdrop-blur-xl border-b border-[#D6CFB5] px-4 pt-4 pb-6 space-y-3 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm font-medium text-[#cbd5e1] hover:text-[#38bdf8] py-2 border-b border-[#334155]/40"
+              className="block text-sm font-semibold text-[#334155] hover:text-[#0D9488] py-2 border-b border-[#D6CFB5]/60"
             >
               {link.name}
             </a>

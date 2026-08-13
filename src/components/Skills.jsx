@@ -7,7 +7,7 @@ export default function Skills() {
     {
       title: "Cloud Security",
       icon: Cloud,
-      color: "text-[#38bdf8]",
+      color: "text-[#0D9488]",
       skills: [
         "AWS (IAM, EC2, S3, CloudWatch)",
         "IAM Policy Auditing",
@@ -20,7 +20,7 @@ export default function Skills() {
     {
       title: "Programming",
       icon: Code,
-      color: "text-[#f59e0b]",
+      color: "text-[#D97706]",
       skills: [
         "Python (boto3, NetworkX, Pandas)",
         "JavaScript (Node.js, Express)",
@@ -32,7 +32,7 @@ export default function Skills() {
     {
       title: "Security Tools",
       icon: Shield,
-      color: "text-[#38bdf8]",
+      color: "text-[#0D9488]",
       skills: [
         "Deception Platforms",
         "Honeypot Systems",
@@ -47,7 +47,7 @@ export default function Skills() {
     {
       title: "Frameworks & Web",
       icon: Layers,
-      color: "text-[#34d399]",
+      color: "text-[#15803D]",
       skills: [
         "React & Vite",
         "FastAPI",
@@ -62,16 +62,16 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 relative bg-tech-alt border-t border-[#334155]/60">
+    <section id="skills" className="py-24 relative bg-tech-alt border-t border-[#D6CFB5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#38bdf8] bg-[#1e293b] px-3 py-1 rounded-full border border-[#334155] mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#0D9488] bg-[#FDFBF7] px-3 py-1 rounded-full border border-[#D6CFB5] mb-3 shadow-sm font-semibold">
             <Shield className="w-3.5 h-3.5" />
             <span>CAPABILITY_GRID</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f8fafc] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
             Technical Skills & Tooling
           </h2>
         </div>
@@ -91,11 +91,11 @@ export default function Skills() {
               >
                 <div>
                   {/* Category Header */}
-                  <div className="flex items-center gap-3 pb-4 mb-4 border-b border-[#334155]/60">
-                    <div className="p-2.5 rounded-xl bg-[#0f172a] border border-[#334155]">
+                  <div className="flex items-center gap-3 pb-4 mb-4 border-b border-[#D6CFB5]">
+                    <div className="p-2.5 rounded-xl bg-[#F6F3E7] border border-[#D6CFB5]">
                       <Icon className={`w-5 h-5 ${category.color}`} />
                     </div>
-                    <h3 className="font-bold text-base text-[#f8fafc]">
+                    <h3 className="font-bold text-base text-[#0F172A]">
                       {category.title}
                     </h3>
                   </div>
@@ -105,9 +105,9 @@ export default function Skills() {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="text-xs font-mono px-3 py-1.5 rounded-xl bg-[#0f172a]/90 text-[#f8fafc] border border-[#334155] flex items-center gap-2 hover:border-[#38bdf8]/60 transition-colors shadow-sm"
+                        className="text-xs font-mono font-medium px-3 py-1.5 rounded-xl bg-[#F6F3E7] text-[#0F172A] border border-[#D6CFB5] flex items-center gap-2 hover:border-[#0D9488] transition-colors shadow-sm"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0D9488]"></span>
                         {skill}
                       </span>
                     ))}

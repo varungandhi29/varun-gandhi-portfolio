@@ -9,34 +9,34 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0c1322] border-t border-[#334155]/60 text-[#cbd5e1] py-12 relative">
+    <footer className="bg-[#E5DFC4] border-t border-[#D6CFB5] text-[#334155] py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#334155]/60">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#D6CFB5]">
           {/* Brand Logo & Subtitle */}
           <div className="flex items-center gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-[#1e293b] border border-[#334155] flex items-center justify-center text-[#38bdf8]">
+            <div className="w-9 h-9 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] flex items-center justify-center text-[#0D9488] shadow-sm">
               <Shield className="w-4 h-4" />
             </div>
             <div>
-              <span className="text-base font-bold text-[#f8fafc] tracking-tight">
+              <span className="text-base font-bold text-[#0F172A] tracking-tight">
                 Varun Gandhi
               </span>
-              <p className="text-xs text-[#94a3b8] font-mono">
+              <p className="text-xs text-[#64748B] font-mono font-medium">
                 Aspiring Cybersecurity Engineer · Cloud Security & IAM Focus
               </p>
             </div>
           </div>
 
           {/* Quick Nav Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[#cbd5e1] font-medium font-sans">
-            <a href="#about" className="hover:text-[#38bdf8] transition-colors">About</a>
-            <a href="#skills" className="hover:text-[#38bdf8] transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-[#38bdf8] transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-[#38bdf8] transition-colors">Experience</a>
-            <a href="#education" className="hover:text-[#38bdf8] transition-colors">Education</a>
-            <a href="#writeups" className="hover:text-[#38bdf8] transition-colors">Writeups</a>
-            <a href="#contact" className="hover:text-[#38bdf8] transition-colors">Contact</a>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[#334155] font-semibold font-sans">
+            <a href="#about" className="hover:text-[#0D9488] transition-colors">About</a>
+            <a href="#skills" className="hover:text-[#0D9488] transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-[#0D9488] transition-colors">Projects</a>
+            <a href="#experience" className="hover:text-[#0D9488] transition-colors">Experience</a>
+            <a href="#education" className="hover:text-[#0D9488] transition-colors">Education</a>
+            <a href="#writeups" className="hover:text-[#0D9488] transition-colors">Writeups</a>
+            <a href="#contact" className="hover:text-[#0D9488] transition-colors">Contact</a>
           </div>
 
           {/* Social Icons */}
@@ -45,7 +45,7 @@ export default function Footer() {
               href="https://github.com/varungandhi29"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#38bdf8] hover:border-[#38bdf8]/50 transition-all shadow-sm"
+              className="p-2.5 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#0D9488] hover:border-[#0D9488] transition-all shadow-sm"
               aria-label="GitHub Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Footer() {
               href="https://linkedin.com/in/varun-gandhi-348716307"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#34d399] hover:border-[#34d399]/50 transition-all shadow-sm"
+              className="p-2.5 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#15803D] hover:border-[#15803D] transition-all shadow-sm"
               aria-label="LinkedIn Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function Footer() {
 
             <a
               href="mailto:2006varungandhi@gmail.com"
-              className="p-2.5 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#38bdf8] hover:border-[#38bdf8]/50 transition-all shadow-sm"
+              className="p-2.5 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#0D9488] hover:border-[#0D9488] transition-all shadow-sm"
               aria-label="Send Email"
             >
               <Mail className="w-4 h-4" />
@@ -76,18 +76,18 @@ export default function Footer() {
         </div>
 
         {/* Copyright & Location Footer */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono font-medium">
           <div>
             © {currentYear} Varun Gandhi. All rights reserved.
           </div>
 
-          <div className="text-[11px] text-[#94a3b8]">
+          <div className="text-[11px] text-[#64748B]">
             Vadodara, Gujarat, India · Cloud Security Portfolio
           </div>
 
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#38bdf8] transition-colors flex items-center gap-1.5 text-xs font-mono font-medium shadow-sm"
+            className="p-2 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#0D9488] transition-colors flex items-center gap-1.5 text-xs font-mono font-bold shadow-sm"
             aria-label="Scroll to top"
           >
             <span>Top</span>

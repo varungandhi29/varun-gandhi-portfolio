@@ -10,99 +10,82 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #0f172a;
-    color: #cbd5e1;
+    background-color: #EDE8D0;
+    color: #334155;
     letter-spacing: -0.01em;
-    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
-    color: #f8fafc;
+    color: #0F172A;
     letter-spacing: -0.02em;
   }
 }
 
-/* Rich Technical Dot-Grid + Ambient Gradient Mesh Overlay */
+/* Warm Parchment Tech Grid Overlay */
 .bg-tech-mesh {
-  background-color: #0f172a;
+  background-color: #EDE8D0;
   background-image: 
-    radial-gradient(ellipse at 50% -10%, rgba(56, 189, 248, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 60%, rgba(45, 212, 191, 0.08) 0%, transparent 50%),
-    radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 28px 28px;
+    radial-gradient(rgba(13, 148, 136, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 .bg-tech-section {
-  background-color: #0f172a;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-color: #EDE8D0;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .bg-tech-alt {
-  background-color: #0c1322;
-  background-image: radial-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+  background-color: #E5DFC4;
+  background-image: radial-gradient(rgba(13, 148, 136, 0.06) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
-/* Premium Rich Glassmorphic Card System */
+/* Premium Warm Light-Theme Card System */
 .tech-card {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(23, 32, 51, 0.95) 100%);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0 10px 30px -10px rgba(2, 6, 23, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #FDFBF7;
+  border: 1px solid #D6CFB5;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tech-card:hover {
-  border-color: rgba(56, 189, 248, 0.45);
-  box-shadow: 0 16px 40px -12px rgba(56, 189, 248, 0.2), inset 0 1px 0 0 rgba(56, 189, 248, 0.2);
-  transform: translateY(-3px);
+  border-color: #0D9488;
+  box-shadow: 0 12px 30px -4px rgba(13, 148, 136, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
 }
 
-/* Rich Gradient Headline Text */
-.gradient-text-cyan {
-  background: linear-gradient(135deg, #f8fafc 0%, #7dd3fc 50%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-gold {
-  background: linear-gradient(135deg, #f8fafc 0%, #fbbf24 60%, #f59e0b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Primary Rich Button */
+/* Primary Rich Teal Button */
 .btn-primary {
-  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-  color: #ffffff;
+  background: #0D9488;
+  color: #FFFFFF;
   font-weight: 700;
-  border: 1px solid rgba(125, 211, 252, 0.6);
-  box-shadow: 0 4px 16px 0 rgba(56, 189, 248, 0.35);
-  transition: all 0.25s ease;
+  border: 1px solid #0F766E;
+  box-shadow: 0 4px 14px 0 rgba(13, 148, 136, 0.25);
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  box-shadow: 0 6px 24px 0 rgba(56, 189, 248, 0.5);
+  background: #0F766E;
+  box-shadow: 0 6px 20px 0 rgba(13, 148, 136, 0.35);
   transform: translateY(-1px);
 }
 
 /* Rich Secondary Button */
 .btn-secondary {
-  background: rgba(30, 41, 59, 0.9);
-  color: #f8fafc;
+  background: #F6F3E7;
+  color: #0F172A;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  transition: all 0.25s ease;
+  border: 1px solid #D6CFB5;
+  transition: all 0.2s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(42, 55, 78, 0.95);
-  border-color: rgba(56, 189, 248, 0.4);
-  color: #38bdf8;
+  background: #EBE5D1;
+  border-color: #0D9488;
+  color: #0D9488;
 }
 
 /* Minimal Custom Scrollbar */
@@ -110,14 +93,14 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #EDE8D0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #C5BEA4;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
+  background: #0D9488;
 }
 
 /* Reduced Motion Accessibility */
