@@ -8,27 +8,27 @@ export default {
     extend: {
       colors: {
         dark: {
-          base: '#0B0E14',
-          surface: '#12161F',
-          border: '#1E2638',
-          hover: '#18202F',
+          base: '#1a2234',
+          surface: '#222d42',
+          border: '#334155',
+          hover: '#2a3750',
         },
         teal: {
-          accent: '#3ED6C4',
-          glow: 'rgba(62, 214, 196, 0.15)',
-          muted: '#22D3B8',
+          accent: '#2dd4bf',
+          glow: 'rgba(45, 212, 191, 0.15)',
+          muted: '#14b8a6',
         },
         amber: {
-          accent: '#E8A33D',
-          badge: 'rgba(232, 163, 61, 0.15)',
+          accent: '#f59e0b',
+          badge: 'rgba(245, 158, 11, 0.15)',
         },
         slateText: {
-          primary: '#E6E9EF',
-          muted: '#8B93A7',
-          dim: '#5A6378',
+          primary: '#f8fafc',
+          muted: '#cbd5e1',
+          dim: '#94a3b8',
         },
         status: {
-          green: '#4ADE80',
+          green: '#4ade80',
         }
       },
       fontFamily: {

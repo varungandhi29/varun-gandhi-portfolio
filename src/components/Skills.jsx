@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Cloud, Code, Wrench, Layers } from 'lucide-react';
+import { Shield, Cloud, Code, Layers } from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
     {
       title: "Cloud Security",
       icon: Cloud,
-      color: "text-[#3ED6C4]",
+      color: "text-[#2dd4bf]",
       skills: [
         "AWS (IAM, EC2, S3, CloudWatch)",
         "IAM Policy Auditing",
@@ -20,7 +20,7 @@ export default function Skills() {
     {
       title: "Programming",
       icon: Code,
-      color: "text-[#E8A33D]",
+      color: "text-[#f59e0b]",
       skills: [
         "Python (boto3, NetworkX, Pandas)",
         "JavaScript (Node.js, Express)",
@@ -32,7 +32,7 @@ export default function Skills() {
     {
       title: "Security Tools",
       icon: Shield,
-      color: "text-[#3ED6C4]",
+      color: "text-[#2dd4bf]",
       skills: [
         "Deception Platforms",
         "Honeypot Systems",
@@ -47,7 +47,7 @@ export default function Skills() {
     {
       title: "Frameworks & Web",
       icon: Layers,
-      color: "text-[#4ADE80]",
+      color: "text-[#4ade80]",
       skills: [
         "React & Vite",
         "FastAPI",
@@ -62,16 +62,16 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 relative bg-[#0B0E14] border-t border-[#1E2638]">
+    <section id="skills" className="py-24 relative bg-[#1a2234] border-t border-[#334155]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#3ED6C4] bg-[#12161F] px-3 py-1 rounded-full border border-[#1E2638] mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#2dd4bf] bg-[#222d42] px-3 py-1 rounded-full border border-[#334155] mb-3">
             <Shield className="w-3.5 h-3.5" />
             <span>CAPABILITY_GRID</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#E6E9EF] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#f8fafc] tracking-tight">
             Technical Skills & Tooling
           </h2>
         </div>
@@ -91,11 +91,11 @@ export default function Skills() {
               >
                 <div>
                   {/* Category Header */}
-                  <div className="flex items-center gap-3 pb-4 mb-4 border-b border-[#1E2638]">
-                    <div className="p-2.5 rounded-xl bg-[#0B0E14] border border-[#1E2638]">
+                  <div className="flex items-center gap-3 pb-4 mb-4 border-b border-[#334155]">
+                    <div className="p-2.5 rounded-xl bg-[#1a2234] border border-[#334155]">
                       <Icon className={`w-5 h-5 ${category.color}`} />
                     </div>
-                    <h3 className="font-bold text-base text-[#E6E9EF]">
+                    <h3 className="font-bold text-base text-[#f8fafc]">
                       {category.title}
                     </h3>
                   </div>
@@ -105,9 +105,9 @@ export default function Skills() {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="text-xs font-mono px-3 py-1.5 rounded-xl bg-[#0B0E14] text-[#E6E9EF] border border-[#1E2638] flex items-center gap-2 hover:border-[#3ED6C4]/50 transition-colors"
+                        className="text-xs font-mono px-3 py-1.5 rounded-xl bg-[#1a2234] text-[#f8fafc] border border-[#334155] flex items-center gap-2 hover:border-[#2dd4bf]/60 transition-colors"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#3ED6C4]"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2dd4bf]"></span>
                         {skill}
                       </span>
                     ))}

@@ -14,16 +14,16 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 relative bg-[#0B0E14] border-t border-[#1E2638]">
+    <section id="education" className="py-24 relative bg-[#1a2234] border-t border-[#334155]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#3ED6C4] bg-[#12161F] px-3 py-1 rounded-full border border-[#1E2638] mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#2dd4bf] bg-[#222d42] px-3 py-1 rounded-full border border-[#334155] mb-3">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>ACADEMIC_BACKGROUND</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#E6E9EF] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#f8fafc] tracking-tight">
             Academic Education
           </h2>
         </div>
@@ -36,41 +36,38 @@ export default function Education() {
           transition={{ duration: 0.35 }}
           className="tech-card p-7 sm:p-9 rounded-2xl space-y-6"
         >
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#1E2638]">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#334155]">
             <div className="space-y-2.5">
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#4ADE80] bg-[#0B0E14] px-3 py-1 rounded-full border border-[#4ADE80]/30">
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#4ade80] bg-[#1a2234] px-3 py-1 rounded-full border border-[#4ade80]/30">
                 <Award className="w-3.5 h-3.5" />
                 <span>FINAL-YEAR UNDERGRADUATE</span>
               </div>
 
-              <h3 className="text-2xl font-bold text-[#E6E9EF]">
+              <h3 className="text-2xl font-bold text-[#f8fafc]">
                 B.Tech in Information Technology
               </h3>
 
-              <p className="text-sm font-semibold text-[#3ED6C4]">
+              <p className="text-sm font-semibold text-[#2dd4bf]">
                 Parul University
               </p>
 
-              <div className="flex items-center gap-3 text-xs text-[#8B93A7] font-sans flex-wrap">
+              <div className="flex items-center gap-3 text-xs text-[#cbd5e1] font-sans flex-wrap">
                 <div className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#8B93A7]" />
+                  <MapPin className="w-3.5 h-3.5 text-[#94a3b8]" />
                   <span>Vadodara, Gujarat, India</span>
-                </div>
-                <div className="font-mono text-[#4ADE80] bg-[#0B0E14] px-2.5 py-0.5 rounded border border-[#4ADE80]/30 font-semibold">
-                  CGPA: 7.02 / 10
                 </div>
               </div>
             </div>
 
             <div className="font-mono text-xs space-y-2 lg:text-right">
-              <div className="inline-flex items-center gap-2 text-[#E6E9EF] bg-[#0B0E14] px-4 py-2 rounded-xl border border-[#1E2638] font-semibold">
-                <Calendar className="w-4 h-4 text-[#3ED6C4]" />
+              <div className="inline-flex items-center gap-2 text-[#f8fafc] bg-[#1a2234] px-4 py-2 rounded-xl border border-[#334155] font-semibold">
+                <Calendar className="w-4 h-4 text-[#2dd4bf]" />
                 <span>EXPECTED GRADUATION: MAY 2027</span>
               </div>
               
-              <div className="p-3 rounded-xl bg-[#0B0E14] border border-[#E8A33D]/30 text-left lg:text-right">
-                <span className="text-[#E8A33D] font-bold block text-[11px]">DIPLOMA-TO-DEGREE PATHWAY:</span>
-                <span className="text-[#8B93A7] text-[11px] font-sans block mt-0.5">
+              <div className="p-3 rounded-xl bg-[#1a2234] border border-[#f59e0b]/30 text-left lg:text-right">
+                <span className="text-[#f59e0b] font-bold block text-[11px]">DIPLOMA-TO-DEGREE PATHWAY:</span>
+                <span className="text-[#cbd5e1] text-[11px] font-sans block mt-0.5">
                   Direct lateral entry admission into 2nd year B.Tech IT following completion of Diploma in IT. First generation tech engineer in family.
                 </span>
               </div>
@@ -79,8 +76,8 @@ export default function Education() {
 
           {/* Key Coursework Section */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#E6E9EF] uppercase tracking-wider">
-              <BookOpen className="w-4 h-4 text-[#3ED6C4]" />
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#f8fafc] uppercase tracking-wider">
+              <BookOpen className="w-4 h-4 text-[#2dd4bf]" />
               <span>CORE COMPUTER SCIENCE & SECURITY COURSEWORK:</span>
             </div>
 
@@ -88,9 +85,9 @@ export default function Education() {
               {coursework.map((subject) => (
                 <div
                   key={subject}
-                  className="text-xs px-3.5 py-1.5 rounded-xl bg-[#0B0E14] text-[#E6E9EF] border border-[#1E2638] flex items-center gap-2 font-mono"
+                  className="text-xs px-3.5 py-1.5 rounded-xl bg-[#1a2234] text-[#f8fafc] border border-[#334155] flex items-center gap-2 font-mono"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#3ED6C4]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2dd4bf]"></span>
                   {subject}
                 </div>
               ))}
