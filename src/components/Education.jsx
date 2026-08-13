@@ -14,12 +14,12 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 relative bg-tech-section border-t border-[#D6CFB5]">
+    <section id="education" className="py-24 relative bg-tech-section border-t border-[#E5E0D8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#0D9488] bg-[#FDFBF7] px-3 py-1 rounded-full border border-[#D6CFB5] mb-3 shadow-sm font-semibold">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#0284C7] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#E5E0D8] mb-3 shadow-sm font-bold">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>ACADEMIC_BACKGROUND</span>
           </div>
@@ -36,9 +36,9 @@ export default function Education() {
           transition={{ duration: 0.35 }}
           className="tech-card p-7 sm:p-9 rounded-2xl space-y-6"
         >
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#D6CFB5]">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#E5E0D8]">
             <div className="space-y-2.5">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#15803D] bg-[#F6F3E7] px-3 py-1 rounded-full border border-[#15803D]/40 shadow-sm">
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#16A34A] bg-[#FAF8F5] px-3 py-1 rounded-full border border-[#16A34A]/40 shadow-sm">
                 <Award className="w-3.5 h-3.5" />
                 <span>FINAL-YEAR UNDERGRADUATE</span>
               </div>
@@ -47,7 +47,7 @@ export default function Education() {
                 B.Tech in Information Technology
               </h3>
 
-              <p className="text-sm font-bold text-[#0D9488]">
+              <p className="text-sm font-bold text-[#0284C7]">
                 Parul University
               </p>
 
@@ -60,12 +60,12 @@ export default function Education() {
             </div>
 
             <div className="font-mono text-xs space-y-2 lg:text-right">
-              <div className="inline-flex items-center gap-2 text-[#0F172A] bg-[#F6F3E7] px-4 py-2 rounded-xl border border-[#D6CFB5] font-bold shadow-sm">
-                <Calendar className="w-4 h-4 text-[#0D9488]" />
+              <div className="inline-flex items-center gap-2 text-[#0F172A] bg-[#FAF8F5] px-4 py-2 rounded-xl border border-[#E5E0D8] font-bold shadow-sm">
+                <Calendar className="w-4 h-4 text-[#0284C7]" />
                 <span>EXPECTED GRADUATION: MAY 2027</span>
               </div>
               
-              <div className="p-3 rounded-xl bg-[#F6F3E7] border border-[#D97706]/40 text-left lg:text-right shadow-sm">
+              <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#D97706]/40 text-left lg:text-right shadow-sm">
                 <span className="text-[#D97706] font-bold block text-[11px]">DIPLOMA-TO-DEGREE PATHWAY:</span>
                 <span className="text-[#334155] text-[11px] font-sans font-medium block mt-0.5">
                   Direct lateral entry admission into 2nd year B.Tech IT following completion of Diploma in IT. First generation tech engineer in family.
@@ -77,7 +77,7 @@ export default function Education() {
           {/* Key Coursework Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#0F172A] uppercase tracking-wider">
-              <BookOpen className="w-4 h-4 text-[#0D9488]" />
+              <BookOpen className="w-4 h-4 text-[#0284C7]" />
               <span>CORE COMPUTER SCIENCE & SECURITY COURSEWORK:</span>
             </div>
 
@@ -85,9 +85,9 @@ export default function Education() {
               {coursework.map((subject) => (
                 <div
                   key={subject}
-                  className="text-xs px-3.5 py-1.5 rounded-xl bg-[#F6F3E7] text-[#0F172A] border border-[#D6CFB5] flex items-center gap-2 font-mono font-medium shadow-sm"
+                  className="text-xs px-3.5 py-1.5 rounded-xl bg-[#FAF8F5] text-[#0F172A] border border-[#E5E0D8] flex items-center gap-2 font-mono font-medium shadow-sm"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#0D9488]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0284C7]"></span>
                   {subject}
                 </div>
               ))}

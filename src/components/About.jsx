@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, GraduationCap, Target, Briefcase, MapPin, Mail, Phone, Award } from 'lucide-react';
+import { Shield, Target, Briefcase, MapPin, Mail, Phone, Award } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 relative bg-tech-section border-t border-[#D6CFB5]">
+    <section id="about" className="py-24 relative bg-tech-section border-t border-[#E5E0D8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#0D9488] bg-[#FDFBF7] px-3 py-1 rounded-full border border-[#D6CFB5] mb-3 shadow-sm font-semibold">
-            <Shield className="w-3.5 h-3.5 text-[#0D9488]" />
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#0284C7] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#E5E0D8] mb-3 shadow-sm font-bold">
+            <Shield className="w-3.5 h-3.5 text-[#0284C7]" />
             <span>PROFILE_DOSSIER</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
@@ -31,7 +31,7 @@ export default function About() {
             <div className="space-y-4 text-[#334155] leading-relaxed font-sans text-base">
               <p>
                 I am a final-year <strong className="text-[#0F172A] font-semibold">B.Tech Information Technology</strong> student 
-                at <strong className="text-[#0D9488] font-semibold">Parul University</strong> in Vadodara, Gujarat, India, graduating in May 2027.
+                at <strong className="text-[#0284C7] font-semibold">Parul University</strong> in Vadodara, Gujarat, India, graduating in May 2027.
               </p>
 
               <p>
@@ -42,22 +42,22 @@ export default function About() {
               
               <p>
                 My technical specialization centers on <strong className="text-[#0F172A]">Cloud Security & Infrastructure Auditing</strong>. 
-                I design and build tools for automated <strong className="text-[#0D9488]">AWS IAM misconfiguration detection</strong>, 
+                I design and build tools for automated <strong className="text-[#0284C7]">AWS IAM misconfiguration detection</strong>, 
                 honeypot threat deception, and interactive cloud vulnerability training.
               </p>
 
               <p>
                 My long-term career focus is dedicated to securing India's critical digital infrastructure across the 
-                <strong className="text-[#15803D] font-semibold"> fintech, banking, and government sectors</strong>.
+                <strong className="text-[#16A34A] font-semibold"> fintech, banking, and government sectors</strong>.
               </p>
             </div>
 
             {/* Availability Badge */}
-            <div className="pt-4 border-t border-[#D6CFB5]">
-              <div className="p-4 rounded-xl bg-[#F6F3E7] border border-[#15803D]/40 flex items-start gap-3.5 shadow-sm">
-                <Briefcase className="w-5 h-5 text-[#15803D] shrink-0 mt-0.5" />
+            <div className="pt-4 border-t border-[#E5E0D8]">
+              <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#16A34A]/40 flex items-start gap-3.5 shadow-sm">
+                <Briefcase className="w-5 h-5 text-[#16A34A] shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="text-xs font-mono font-bold text-[#15803D] uppercase tracking-wider">
+                  <h3 className="text-xs font-mono font-bold text-[#16A34A] uppercase tracking-wider">
                     CURRENT AVAILABILITY
                   </h3>
                   <p className="text-xs text-[#334155] mt-1 font-medium">
@@ -93,7 +93,7 @@ export default function About() {
 
             {/* Long-Term Career Target Card */}
             <div className="tech-card p-6 rounded-2xl space-y-3">
-              <div className="flex items-center gap-2 text-[#0D9488] font-mono text-xs font-bold">
+              <div className="flex items-center gap-2 text-[#0284C7] font-mono text-xs font-bold">
                 <Target className="w-4 h-4" />
                 <span>CAREER_OBJECTIVE</span>
               </div>
@@ -108,17 +108,17 @@ export default function About() {
             {/* Location & Contact Info */}
             <div className="tech-card p-6 rounded-2xl space-y-3">
               <div className="flex items-center gap-2 text-[#0F172A] font-mono text-xs font-bold">
-                <MapPin className="w-4 h-4 text-[#0D9488]" />
+                <MapPin className="w-4 h-4 text-[#0284C7]" />
                 <span>LOCATION & DIRECT CHANNELS</span>
               </div>
               <div className="text-xs text-[#334155] space-y-2 font-sans">
                 <div className="text-[#0F172A] font-medium">Vadodara, Gujarat, India</div>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-[#0D9488]" />
-                  <a href="mailto:2006varungandhi@gmail.com" className="text-[#0D9488] hover:underline font-semibold">2006varungandhi@gmail.com</a>
+                  <Mail className="w-3.5 h-3.5 text-[#0284C7]" />
+                  <a href="mailto:2006varungandhi@gmail.com" className="text-[#0284C7] hover:underline font-semibold">2006varungandhi@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-[#15803D]" />
+                  <Phone className="w-3.5 h-3.5 text-[#16A34A]" />
                   <a href="tel:+919099604679" className="hover:text-[#0F172A] transition-colors font-medium">+91 90996 04679</a>
                 </div>
               </div>

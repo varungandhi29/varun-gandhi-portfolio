@@ -34,12 +34,12 @@ export default function Writeups() {
   ];
 
   return (
-    <section id="writeups" className="py-24 relative bg-tech-alt border-t border-[#D6CFB5]">
+    <section id="writeups" className="py-24 relative bg-tech-alt border-t border-[#E5E0D8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D97706] bg-[#FDFBF7] px-3 py-1 rounded-full border border-[#D6CFB5] mb-3 shadow-sm font-bold">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#D97706] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#E5E0D8] mb-3 shadow-sm font-bold">
             <BookOpen className="w-3.5 h-3.5" />
             <span>TECHNICAL_WRITEUPS</span>
           </div>
@@ -68,7 +68,7 @@ export default function Writeups() {
                   <span className="text-[#64748B]">{item.date}</span>
                 </div>
 
-                <h3 className="text-base font-bold text-[#0F172A] group-hover:text-[#0D9488] transition-colors leading-snug">
+                <h3 className="text-base font-bold text-[#0F172A] group-hover:text-[#0284C7] transition-colors leading-snug">
                   {item.title}
                 </h3>
 
@@ -77,12 +77,12 @@ export default function Writeups() {
                 </p>
               </div>
 
-              <div className="space-y-3 pt-3 border-t border-[#D6CFB5]">
+              <div className="space-y-3 pt-3 border-t border-[#E5E0D8]">
                 <div className="flex flex-wrap gap-1">
                   {item.topics.map((t) => (
                     <span
                       key={t}
-                      className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-[#F6F3E7] text-[#0F172A] border border-[#D6CFB5]"
+                      className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-[#FAF8F5] text-[#0F172A] border border-[#E5E0D8]"
                     >
                       {t}
                     </span>
@@ -91,7 +91,7 @@ export default function Writeups() {
 
                 <a
                   href="#projects"
-                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#0D9488] hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#0284C7] hover:underline"
                 >
                   <span>{item.linkText}</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

@@ -8,16 +8,16 @@ export default {
     extend: {
       colors: {
         parchment: {
-          base: '#EDE8D0',
-          surface: '#F6F3E7',
-          card: '#FDFBF7',
-          border: '#D6CFB5',
-          borderHover: '#0D9488',
+          base: '#FAF8F5',
+          surface: '#F4F1EA',
+          card: '#FFFFFF',
+          border: '#E5E0D8',
+          borderHover: '#0284C7',
         },
-        teal: {
-          accent: '#0D9488',
-          dark: '#0F766E',
-          glow: 'rgba(13, 148, 136, 0.12)',
+        accent: {
+          primary: '#0284C7',
+          teal: '#0D9488',
+          glow: 'rgba(2, 132, 199, 0.12)',
         },
         amber: {
           accent: '#D97706',
@@ -29,7 +29,7 @@ export default {
           muted: '#64748B',
         },
         status: {
-          green: '#15803D',
+          green: '#16A34A',
         }
       },
       fontFamily: {

@@ -9,13 +9,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#E5DFC4] border-t border-[#D6CFB5] text-[#334155] py-12 relative">
+    <footer className="bg-[#F3EFE6] border-t border-[#E5E0D8] text-[#334155] py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#D6CFB5]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#E5E0D8]">
           {/* Brand Logo & Subtitle */}
           <div className="flex items-center gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] flex items-center justify-center text-[#0D9488] shadow-sm">
+            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center text-[#0284C7] shadow-sm">
               <Shield className="w-4 h-4" />
             </div>
             <div>
@@ -30,13 +30,13 @@ export default function Footer() {
 
           {/* Quick Nav Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[#334155] font-semibold font-sans">
-            <a href="#about" className="hover:text-[#0D9488] transition-colors">About</a>
-            <a href="#skills" className="hover:text-[#0D9488] transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-[#0D9488] transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-[#0D9488] transition-colors">Experience</a>
-            <a href="#education" className="hover:text-[#0D9488] transition-colors">Education</a>
-            <a href="#writeups" className="hover:text-[#0D9488] transition-colors">Writeups</a>
-            <a href="#contact" className="hover:text-[#0D9488] transition-colors">Contact</a>
+            <a href="#about" className="hover:text-[#0284C7] transition-colors">About</a>
+            <a href="#skills" className="hover:text-[#0284C7] transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-[#0284C7] transition-colors">Projects</a>
+            <a href="#experience" className="hover:text-[#0284C7] transition-colors">Experience</a>
+            <a href="#education" className="hover:text-[#0284C7] transition-colors">Education</a>
+            <a href="#writeups" className="hover:text-[#0284C7] transition-colors">Writeups</a>
+            <a href="#contact" className="hover:text-[#0284C7] transition-colors">Contact</a>
           </div>
 
           {/* Social Icons */}
@@ -45,7 +45,7 @@ export default function Footer() {
               href="https://github.com/varungandhi29"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#0D9488] hover:border-[#0D9488] transition-all shadow-sm"
+              className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] text-[#0F172A] hover:text-[#0284C7] hover:border-[#0284C7] transition-all shadow-sm"
               aria-label="GitHub Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Footer() {
               href="https://linkedin.com/in/varun-gandhi-348716307"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#15803D] hover:border-[#15803D] transition-all shadow-sm"
+              className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] text-[#0F172A] hover:text-[#16A34A] hover:border-[#16A34A] transition-all shadow-sm"
               aria-label="LinkedIn Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function Footer() {
 
             <a
               href="mailto:2006varungandhi@gmail.com"
-              className="p-2.5 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#0D9488] hover:border-[#0D9488] transition-all shadow-sm"
+              className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] text-[#0F172A] hover:text-[#0284C7] hover:border-[#0284C7] transition-all shadow-sm"
               aria-label="Send Email"
             >
               <Mail className="w-4 h-4" />
@@ -87,7 +87,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-xl bg-[#FDFBF7] border border-[#D6CFB5] text-[#0F172A] hover:text-[#0D9488] transition-colors flex items-center gap-1.5 text-xs font-mono font-bold shadow-sm"
+            className="p-2 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] text-[#0F172A] hover:text-[#0284C7] transition-colors flex items-center gap-1.5 text-xs font-mono font-bold shadow-sm"
             aria-label="Scroll to top"
           >
             <span>Top</span>

@@ -13,9 +13,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FDFBF7] border border-[#D6CFB5] text-[#0D9488] font-mono text-xs font-semibold shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-[#0284C7] font-mono text-xs font-bold shadow-sm"
           >
-            <Shield className="w-4 h-4 text-[#0D9488]" />
+            <Shield className="w-4 h-4 text-[#0284C7]" />
             <span>Aspiring Cybersecurity Engineer — Cloud Security & IAM</span>
           </motion.div>
 
@@ -45,13 +45,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: 0.15 }}
-            className="flex flex-wrap items-center justify-center gap-3 text-xs text-[#0F172A] font-mono font-medium"
+            className="flex flex-wrap items-center justify-center gap-3 text-xs text-[#0F172A] font-mono font-semibold"
           >
-            <div className="flex items-center gap-2 bg-[#FDFBF7] px-4 py-2 rounded-xl border border-[#D6CFB5] shadow-sm">
-              <MapPin className="w-4 h-4 text-[#0D9488]" />
+            <div className="flex items-center gap-2 bg-[#FFFFFF] px-4 py-2 rounded-xl border border-[#E5E0D8] shadow-sm">
+              <MapPin className="w-4 h-4 text-[#0284C7]" />
               <span>Vadodara, Gujarat, India</span>
             </div>
-            <div className="flex items-center gap-2 bg-[#FDFBF7] px-4 py-2 rounded-xl border border-[#D6CFB5] shadow-sm">
+            <div className="flex items-center gap-2 bg-[#FFFFFF] px-4 py-2 rounded-xl border border-[#E5E0D8] shadow-sm">
               <GraduationCap className="w-4 h-4 text-[#D97706]" />
               <span>Parul University B.Tech IT '27</span>
             </div>
@@ -78,13 +78,13 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn-secondary text-xs px-6 py-3 rounded-xl flex items-center gap-2 focus:outline-none"
             >
-              <FileText className="w-4 h-4 text-[#0D9488]" />
+              <FileText className="w-4 h-4 text-[#0284C7]" />
               <span>Download Resume</span>
             </a>
 
             <a
               href="#contact"
-              className="text-xs font-semibold text-[#15803D] bg-[#FDFBF7] hover:bg-[#F6F3E7] border border-[#15803D]/40 px-6 py-3 rounded-xl transition-all flex items-center gap-2 focus:outline-none shadow-sm"
+              className="text-xs font-semibold text-[#16A34A] bg-[#FFFFFF] hover:bg-[#FAF8F5] border border-[#16A34A]/40 px-6 py-3 rounded-xl transition-all flex items-center gap-2 focus:outline-none shadow-sm"
             >
               <Mail className="w-4 h-4" />
               <span>Get In Touch</span>
@@ -98,14 +98,14 @@ export default function Hero() {
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
         <a
           href="#about"
-          className="text-[#64748B] hover:text-[#0D9488] transition-colors p-2"
+          className="text-[#64748B] hover:text-[#0284C7] transition-colors p-2"
           aria-label="Scroll down to About section"
         >
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
           >
-            <ArrowDown className="w-4 h-4 text-[#0D9488]" />
+            <ArrowDown className="w-4 h-4 text-[#0284C7]" />
           </motion.div>
         </a>
       </div>
