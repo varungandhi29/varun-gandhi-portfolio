@@ -37,13 +37,13 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 relative bg-[#1a2234] border-t border-[#334155]">
+    <section id="experience" className="py-24 relative bg-tech-alt border-t border-[#334155]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#2dd4bf] bg-[#222d42] px-3 py-1 rounded-full border border-[#334155] mb-3">
-            <Briefcase className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#38bdf8] bg-[#1e293b] px-3 py-1 rounded-full border border-[#334155] mb-3 shadow-sm">
+            <Briefcase className="w-3.5 h-3.5 text-[#38bdf8]" />
             <span>INDUSTRY_EXPERIENCE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#f8fafc] tracking-tight">
@@ -60,22 +60,22 @@ export default function Experience() {
           className="tech-card p-7 sm:p-9 rounded-2xl space-y-8"
         >
           {/* Role Header */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#334155]">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#334155]/60">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono text-[#2dd4bf] mb-1">
-                <span className="w-2 h-2 rounded-full bg-[#2dd4bf]"></span>
+              <div className="flex items-center gap-2 text-xs font-mono text-[#38bdf8] mb-1">
+                <span className="w-2 h-2 rounded-full bg-[#38bdf8]"></span>
                 <span>Internship · 7th Semester</span>
               </div>
               <h3 className="text-2xl font-bold text-[#f8fafc]">
                 Data Analyst Intern — Inovexia
               </h3>
-              <p className="text-xs font-mono text-[#cbd5e1] mt-1">
+              <p className="text-xs font-mono text-[#94a3b8] mt-1">
                 3 End-to-End Analytics, Data Engineering & Visualization Workstreams
               </p>
             </div>
 
-            <div className="text-xs font-mono text-[#4ade80] bg-[#1a2234] px-4 py-2 rounded-xl border border-[#4ade80]/30 flex items-center gap-2 self-start md:self-auto shadow-sm">
-              <Calendar className="w-4 h-4 text-[#4ade80]" />
+            <div className="text-xs font-mono text-[#34d399] bg-[#0f172a] px-4 py-2 rounded-xl border border-[#34d399]/40 flex items-center gap-2 self-start md:self-auto shadow-sm">
+              <Calendar className="w-4 h-4 text-[#34d399]" />
               <span>3 Project Workstreams Delivered</span>
             </div>
           </div>
@@ -87,42 +87,42 @@ export default function Experience() {
               return (
                 <div
                   key={project.title}
-                  className="p-5 rounded-2xl bg-[#1a2234] border border-[#334155] flex flex-col justify-between space-y-4 hover:border-[#2dd4bf]/50 transition-all group"
+                  className="p-5 rounded-2xl bg-[#0f172a]/90 border border-[#334155] flex flex-col justify-between space-y-4 hover:border-[#38bdf8]/50 transition-all group shadow-sm"
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between text-xs font-mono">
-                      <span className="text-[#2dd4bf] font-semibold">{project.category}</span>
-                      <Icon className="w-4 h-4 text-[#cbd5e1]" />
+                      <span className="text-[#38bdf8] font-semibold">{project.category}</span>
+                      <Icon className="w-4 h-4 text-[#94a3b8]" />
                     </div>
 
-                    <h4 className="text-base font-bold text-[#f8fafc] group-hover:text-[#2dd4bf] transition-colors">
+                    <h4 className="text-base font-bold text-[#f8fafc] group-hover:text-[#38bdf8] transition-colors">
                       {project.title}
                     </h4>
 
-                    <div className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[#4ade80] bg-[#4ade80]/10 px-2.5 py-0.5 rounded-md border border-[#4ade80]/30">
+                    <div className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[#34d399] bg-[#34d399]/10 px-2.5 py-0.5 rounded-md border border-[#34d399]/30">
                       <CheckCircle2 className="w-3.5 h-3.5" />
                       {project.metrics}
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-[#334155]/80 text-xs font-sans">
+                    <div className="space-y-2 pt-2 border-t border-[#334155]/60 text-xs font-sans">
                       <div>
                         <span className="text-[#f59e0b] font-mono text-[11px] font-bold block">WHAT WAS BUILT:</span>
                         <p className="text-[#cbd5e1] leading-relaxed mt-0.5">{project.whatWasBuilt}</p>
                       </div>
                       <div>
-                        <span className="text-[#4ade80] font-mono text-[11px] font-bold block">OUTCOME & METRIC:</span>
+                        <span className="text-[#34d399] font-mono text-[11px] font-bold block">OUTCOME & METRIC:</span>
                         <p className="text-[#cbd5e1] leading-relaxed mt-0.5">{project.outcome}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Stack & Repo Link */}
-                  <div className="space-y-3 pt-3 border-t border-[#334155]">
+                  <div className="space-y-3 pt-3 border-t border-[#334155]/60">
                     <div className="flex flex-wrap gap-1">
                       {project.stack.map((item) => (
                         <span
                           key={item}
-                          className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#222d42] text-[#cbd5e1] border border-[#334155]"
+                          className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1e293b] text-[#cbd5e1] border border-[#334155]"
                         >
                           {item}
                         </span>
@@ -133,9 +133,9 @@ export default function Experience() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#f8fafc] hover:text-[#2dd4bf] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#f8fafc] hover:text-[#38bdf8] transition-colors"
                     >
-                      <svg className="w-3.5 h-3.5 text-[#2dd4bf] fill-current" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 text-[#38bdf8] fill-current" viewBox="0 0 24 24">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                       </svg>
                       <span className="underline underline-offset-2">View Repository</span>

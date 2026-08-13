@@ -9,20 +9,20 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a2234] border-t border-[#334155] text-[#cbd5e1] py-12 relative">
+    <footer className="bg-[#0c1322] border-t border-[#334155]/60 text-[#cbd5e1] py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#334155]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#334155]/60">
           {/* Brand Logo & Subtitle */}
           <div className="flex items-center gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-[#222d42] border border-[#334155] flex items-center justify-center text-[#2dd4bf]">
+            <div className="w-9 h-9 rounded-xl bg-[#1e293b] border border-[#334155] flex items-center justify-center text-[#38bdf8]">
               <Shield className="w-4 h-4" />
             </div>
             <div>
               <span className="text-base font-bold text-[#f8fafc] tracking-tight">
                 Varun Gandhi
               </span>
-              <p className="text-xs text-[#cbd5e1] font-mono">
+              <p className="text-xs text-[#94a3b8] font-mono">
                 Aspiring Cybersecurity Engineer · Cloud Security & IAM Focus
               </p>
             </div>
@@ -30,13 +30,13 @@ export default function Footer() {
 
           {/* Quick Nav Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[#cbd5e1] font-medium font-sans">
-            <a href="#about" className="hover:text-[#2dd4bf] transition-colors">About</a>
-            <a href="#skills" className="hover:text-[#2dd4bf] transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-[#2dd4bf] transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-[#2dd4bf] transition-colors">Experience</a>
-            <a href="#education" className="hover:text-[#2dd4bf] transition-colors">Education</a>
-            <a href="#writeups" className="hover:text-[#2dd4bf] transition-colors">Writeups</a>
-            <a href="#contact" className="hover:text-[#2dd4bf] transition-colors">Contact</a>
+            <a href="#about" className="hover:text-[#38bdf8] transition-colors">About</a>
+            <a href="#skills" className="hover:text-[#38bdf8] transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-[#38bdf8] transition-colors">Projects</a>
+            <a href="#experience" className="hover:text-[#38bdf8] transition-colors">Experience</a>
+            <a href="#education" className="hover:text-[#38bdf8] transition-colors">Education</a>
+            <a href="#writeups" className="hover:text-[#38bdf8] transition-colors">Writeups</a>
+            <a href="#contact" className="hover:text-[#38bdf8] transition-colors">Contact</a>
           </div>
 
           {/* Social Icons */}
@@ -45,7 +45,7 @@ export default function Footer() {
               href="https://github.com/varungandhi29"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#222d42] border border-[#334155] text-[#f8fafc] hover:text-[#2dd4bf] hover:border-[#2dd4bf]/50 transition-all"
+              className="p-2.5 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#38bdf8] hover:border-[#38bdf8]/50 transition-all shadow-sm"
               aria-label="GitHub Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Footer() {
               href="https://linkedin.com/in/varun-gandhi-348716307"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-[#222d42] border border-[#334155] text-[#f8fafc] hover:text-[#4ade80] hover:border-[#4ade80]/50 transition-all"
+              className="p-2.5 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#34d399] hover:border-[#34d399]/50 transition-all shadow-sm"
               aria-label="LinkedIn Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function Footer() {
 
             <a
               href="mailto:2006varungandhi@gmail.com"
-              className="p-2.5 rounded-xl bg-[#222d42] border border-[#334155] text-[#f8fafc] hover:text-[#2dd4bf] hover:border-[#2dd4bf]/50 transition-all"
+              className="p-2.5 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#38bdf8] hover:border-[#38bdf8]/50 transition-all shadow-sm"
               aria-label="Send Email"
             >
               <Mail className="w-4 h-4" />
@@ -81,13 +81,13 @@ export default function Footer() {
             © {currentYear} Varun Gandhi. All rights reserved.
           </div>
 
-          <div className="text-[11px] text-[#cbd5e1]">
+          <div className="text-[11px] text-[#94a3b8]">
             Vadodara, Gujarat, India · Cloud Security Portfolio
           </div>
 
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-xl bg-[#222d42] border border-[#334155] text-[#f8fafc] hover:text-[#2dd4bf] transition-colors flex items-center gap-1.5 text-xs font-mono font-medium"
+            className="p-2 rounded-xl bg-[#1e293b] border border-[#334155] text-[#f8fafc] hover:text-[#38bdf8] transition-colors flex items-center gap-1.5 text-xs font-mono font-medium shadow-sm"
             aria-label="Scroll to top"
           >
             <span>Top</span>

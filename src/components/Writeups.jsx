@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, ArrowUpRight, BookOpen } from 'lucide-react';
+import { ArrowUpRight, BookOpen } from 'lucide-react';
 
 export default function Writeups() {
   const writeups = [
@@ -34,12 +34,12 @@ export default function Writeups() {
   ];
 
   return (
-    <section id="writeups" className="py-24 relative bg-[#1a2234] border-t border-[#334155]">
+    <section id="writeups" className="py-24 relative bg-tech-alt border-t border-[#334155]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#f59e0b] bg-[#222d42] px-3 py-1 rounded-full border border-[#334155] mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#f59e0b] bg-[#1e293b] px-3 py-1 rounded-full border border-[#334155] mb-3 shadow-sm">
             <BookOpen className="w-3.5 h-3.5" />
             <span>TECHNICAL_WRITEUPS</span>
           </div>
@@ -65,10 +65,10 @@ export default function Writeups() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono">
                   <span className="text-[#f59e0b] font-semibold">{item.badge}</span>
-                  <span className="text-[#cbd5e1]">{item.date}</span>
+                  <span className="text-[#94a3b8]">{item.date}</span>
                 </div>
 
-                <h3 className="text-base font-bold text-[#f8fafc] group-hover:text-[#2dd4bf] transition-colors leading-snug">
+                <h3 className="text-base font-bold text-[#f8fafc] group-hover:text-[#38bdf8] transition-colors leading-snug">
                   {item.title}
                 </h3>
 
@@ -77,12 +77,12 @@ export default function Writeups() {
                 </p>
               </div>
 
-              <div className="space-y-3 pt-3 border-t border-[#334155]">
+              <div className="space-y-3 pt-3 border-t border-[#334155]/60">
                 <div className="flex flex-wrap gap-1">
                   {item.topics.map((t) => (
                     <span
                       key={t}
-                      className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1a2234] text-[#cbd5e1] border border-[#334155]"
+                      className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0f172a] text-[#cbd5e1] border border-[#334155]"
                     >
                       {t}
                     </span>
@@ -91,7 +91,7 @@ export default function Writeups() {
 
                 <a
                   href="#projects"
-                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#2dd4bf] hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#38bdf8] hover:underline"
                 >
                   <span>{item.linkText}</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

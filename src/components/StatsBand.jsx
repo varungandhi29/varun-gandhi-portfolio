@@ -9,14 +9,14 @@ export default function StatsBand() {
       label: "Records Processed",
       detail: "OLA Ride-Hailing Analysis",
       icon: Database,
-      color: "text-[#2dd4bf]"
+      color: "text-[#38bdf8]"
     },
     {
       metric: "22 Tests",
       label: "Passing Unit Tests",
       detail: "IAM Scanner Suite (pytest)",
       icon: CheckCircle2,
-      color: "text-[#4ade80]"
+      color: "text-[#34d399]"
     },
     {
       metric: "6 Rules",
@@ -30,12 +30,12 @@ export default function StatsBand() {
       label: "Charts / Shipments",
       detail: "FedEx Logistics EDA",
       icon: BarChart3,
-      color: "text-[#2dd4bf]"
+      color: "text-[#38bdf8]"
     }
   ];
 
   return (
-    <section id="stats" className="relative z-20 py-10 bg-[#1a2234] border-y border-[#334155]">
+    <section id="stats" className="relative z-20 py-10 bg-tech-alt border-y border-[#334155]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {stats.map((item, index) => {
@@ -49,7 +49,7 @@ export default function StatsBand() {
                 transition={{ duration: 0.35, delay: index * 0.08 }}
                 className="tech-card p-5 rounded-2xl flex items-center gap-4"
               >
-                <div className={`p-3 rounded-xl bg-[#1a2234] border border-[#334155] ${item.color}`}>
+                <div className={`p-3 rounded-xl bg-[#0f172a] border border-[#334155] ${item.color}`}>
                   <Icon className="w-6 h-6" />
                 </div>
                 <div>

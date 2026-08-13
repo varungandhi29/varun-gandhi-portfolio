@@ -7,7 +7,7 @@ export default function Skills() {
     {
       title: "Cloud Security",
       icon: Cloud,
-      color: "text-[#2dd4bf]",
+      color: "text-[#38bdf8]",
       skills: [
         "AWS (IAM, EC2, S3, CloudWatch)",
         "IAM Policy Auditing",
@@ -32,7 +32,7 @@ export default function Skills() {
     {
       title: "Security Tools",
       icon: Shield,
-      color: "text-[#2dd4bf]",
+      color: "text-[#38bdf8]",
       skills: [
         "Deception Platforms",
         "Honeypot Systems",
@@ -47,7 +47,7 @@ export default function Skills() {
     {
       title: "Frameworks & Web",
       icon: Layers,
-      color: "text-[#4ade80]",
+      color: "text-[#34d399]",
       skills: [
         "React & Vite",
         "FastAPI",
@@ -62,12 +62,12 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 relative bg-[#1a2234] border-t border-[#334155]">
+    <section id="skills" className="py-24 relative bg-tech-alt border-t border-[#334155]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#2dd4bf] bg-[#222d42] px-3 py-1 rounded-full border border-[#334155] mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#38bdf8] bg-[#1e293b] px-3 py-1 rounded-full border border-[#334155] mb-3 shadow-sm">
             <Shield className="w-3.5 h-3.5" />
             <span>CAPABILITY_GRID</span>
           </div>
@@ -91,8 +91,8 @@ export default function Skills() {
               >
                 <div>
                   {/* Category Header */}
-                  <div className="flex items-center gap-3 pb-4 mb-4 border-b border-[#334155]">
-                    <div className="p-2.5 rounded-xl bg-[#1a2234] border border-[#334155]">
+                  <div className="flex items-center gap-3 pb-4 mb-4 border-b border-[#334155]/60">
+                    <div className="p-2.5 rounded-xl bg-[#0f172a] border border-[#334155]">
                       <Icon className={`w-5 h-5 ${category.color}`} />
                     </div>
                     <h3 className="font-bold text-base text-[#f8fafc]">
@@ -105,9 +105,9 @@ export default function Skills() {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="text-xs font-mono px-3 py-1.5 rounded-xl bg-[#1a2234] text-[#f8fafc] border border-[#334155] flex items-center gap-2 hover:border-[#2dd4bf]/60 transition-colors"
+                        className="text-xs font-mono px-3 py-1.5 rounded-xl bg-[#0f172a]/90 text-[#f8fafc] border border-[#334155] flex items-center gap-2 hover:border-[#38bdf8]/60 transition-colors shadow-sm"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2dd4bf]"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
                         {skill}
                       </span>
                     ))}

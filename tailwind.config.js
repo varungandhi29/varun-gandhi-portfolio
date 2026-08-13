@@ -8,33 +8,38 @@ export default {
     extend: {
       colors: {
         dark: {
-          base: '#1a2234',
-          surface: '#222d42',
+          base: '#0f172a',
+          card: '#1e293b',
+          elevated: '#172033',
           border: '#334155',
-          hover: '#2a3750',
+          borderGlow: 'rgba(56, 189, 248, 0.25)',
         },
-        teal: {
-          accent: '#2dd4bf',
-          glow: 'rgba(45, 212, 191, 0.15)',
-          muted: '#14b8a6',
+        cyanGlow: {
+          primary: '#38bdf8',
+          teal: '#2dd4bf',
+          light: '#7dd3fc',
         },
-        amber: {
-          accent: '#f59e0b',
-          badge: 'rgba(245, 158, 11, 0.15)',
+        amberGlow: {
+          primary: '#f59e0b',
+          gold: '#fbbf24',
         },
         slateText: {
-          primary: '#f8fafc',
-          muted: '#cbd5e1',
-          dim: '#94a3b8',
+          heading: '#f8fafc',
+          body: '#cbd5e1',
+          muted: '#94a3b8',
         },
-        status: {
-          green: '#4ade80',
+        emerald: {
+          status: '#34d399',
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         heading: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+      },
+      backgroundImage: {
+        'hero-radial': 'radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0) 70%)',
+        'card-gradient': 'linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(23, 32, 51, 0.95) 100%)',
       }
     },
   },
