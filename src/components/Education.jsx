@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Calendar, MapPin, BookOpen, Award } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, BookOpen, Award, ShieldCheck } from 'lucide-react';
 
 export default function Education() {
   const coursework = [
@@ -65,10 +65,13 @@ export default function Education() {
                 <span>EXPECTED GRADUATION: MAY 2027</span>
               </div>
               
-              <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#D97706]/40 text-left lg:text-right shadow-sm">
-                <span className="text-[#D97706] font-bold block text-[11px]">DIPLOMA-TO-DEGREE PATHWAY:</span>
+              <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#0284C7]/30 text-left lg:text-right shadow-sm">
+                <span className="text-[#0284C7] font-bold flex items-center gap-1.5 text-[11px] lg:justify-end">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#0284C7]" />
+                  SYSTEM DEFENSE SPECIALIZATION:
+                </span>
                 <span className="text-[#334155] text-[11px] font-sans font-medium block mt-0.5">
-                  Direct lateral entry admission into 2nd year B.Tech IT following completion of Diploma in IT. First generation tech engineer in family.
+                  Focusing on hands-on cloud security labs, automated IAM audit tooling, and real-world threat detection engineering throughout B.Tech IT.
                 </span>
               </div>
             </div>

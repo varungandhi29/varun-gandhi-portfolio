@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Target, Briefcase, MapPin, Mail, Phone, Award } from 'lucide-react';
+import { Shield, Target, Briefcase, MapPin, Mail, Phone, Award, Cpu } from 'lucide-react';
 
 export default function About() {
   return (
@@ -35,9 +35,9 @@ export default function About() {
               </p>
 
               <p>
-                Following a <strong className="text-[#D97706] font-semibold">Diploma-to-Degree (lateral entry) pathway</strong>, 
-                I became the first in my family to pursue a formal degree in engineering and technology. This journey built a pragmatic, 
-                hands-on engineering mindset focused on systems execution and real-world utility.
+                Driven by a deep curiosity for how cloud infrastructure breaks and how to defend it, I have cultivated a pragmatic, 
+                hands-on engineering mindset focused on systems execution and real-world security utility. My journey in tech is defined 
+                by self-driven building—transforming theoretical security concepts into automated auditing engines, threat deception platforms, and resilient systems.
               </p>
               
               <p>
@@ -77,17 +77,17 @@ export default function About() {
             transition={{ duration: 0.35, delay: 0.1 }}
             className="lg:col-span-5 space-y-5"
           >
-            {/* Diploma-to-Degree Educational Milestone Card */}
+            {/* Inspiring Technical Mindset Milestone Card */}
             <div className="tech-card p-6 rounded-2xl space-y-3">
               <div className="flex items-center gap-2 text-[#D97706] font-mono text-xs font-bold">
-                <Award className="w-4 h-4" />
-                <span>MILESTONE_PATHWAY</span>
+                <Cpu className="w-4 h-4" />
+                <span>PRACTICAL_ENGINEERING</span>
               </div>
               <h3 className="text-lg font-bold text-[#0F172A]">
-                Diploma-to-Degree (Lateral Entry)
+                Hands-On Systems Defense
               </h3>
               <p className="text-xs text-[#334155] font-sans leading-relaxed">
-                Completed Diploma in Information Technology before joining B.Tech IT at Parul University in the 2nd year. First generation tech engineer in family.
+                Building production-grade security tooling, automated IAM policy auditing engines, and threat deception platforms with an active, builder-first mindset.
               </p>
             </div>
 
