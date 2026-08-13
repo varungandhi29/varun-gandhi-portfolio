@@ -9,13 +9,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 text-slate-300 py-12 relative">
+    <footer className="bg-[#050914] border-t border-slate-800/80 text-slate-300 py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
           {/* Brand Logo & Subtitle */}
           <div className="flex items-center gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-blue-950 border border-blue-800 flex items-center justify-center text-blue-400">
+            <div className="w-9 h-9 rounded-xl bg-blue-950/80 border border-blue-500/40 flex items-center justify-center text-blue-400">
               <Shield className="w-4 h-4" />
             </div>
             <div>
@@ -44,7 +44,7 @@ export default function Footer() {
               href="https://github.com/varungandhi29"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:text-blue-400 hover:border-blue-500 transition-all"
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-blue-400 hover:border-blue-500/40 transition-all"
               aria-label="GitHub Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function Footer() {
               href="https://linkedin.com/in/varun-gandhi-348716307"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:text-emerald-400 hover:border-emerald-500 transition-all"
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-emerald-400 hover:border-emerald-500/40 transition-all"
               aria-label="LinkedIn Profile"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export default function Footer() {
 
             <a
               href="mailto:2006varungandhi@gmail.com"
-              className="p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:text-blue-400 hover:border-blue-500 transition-all"
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-blue-400 hover:border-blue-500/40 transition-all"
               aria-label="Send Email"
             >
               <Mail className="w-4 h-4" />
@@ -86,7 +86,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:text-blue-400 transition-colors flex items-center gap-1.5 text-xs font-medium"
+            className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-blue-400 transition-colors flex items-center gap-1.5 text-xs font-medium"
             aria-label="Scroll to top"
           >
             <span>Top</span>
