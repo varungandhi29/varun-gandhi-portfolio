@@ -1,7 +1,6 @@
 {
   "name": "varun-gandhi-portfolio-website",
   "private": true,
-
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.3.3",
     "framer-motion": "^11.18.2",
     "lucide-react": "^1.31.0",

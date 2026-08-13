@@ -7,12 +7,13 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Education from './components/Education';
+import Writeups from './components/Writeups';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#07090e] text-slate-200 selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="min-h-screen bg-[#0B0E14] text-[#E6E9EF] selection:bg-[#3ED6C4]/30 selection:text-[#3ED6C4]">
       <Navbar />
       <main>
         <Hero />
@@ -22,6 +23,7 @@ export default function App() {
         <Projects />
         <Experience />
         <Education />
+        <Writeups />
         <Contact />
       </main>
       <Footer />

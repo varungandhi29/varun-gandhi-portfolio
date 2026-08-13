@@ -19,13 +19,14 @@ export default function Navbar() {
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
+    { name: 'Writeups', href: '#writeups' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#070d19]/90 backdrop-blur-xl border-b border-slate-800/80 shadow-xl py-3.5' 
+        ? 'bg-[#0B0E14]/90 backdrop-blur-xl border-b border-[#1E2638] shadow-xl py-3.5' 
         : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,30 +34,30 @@ export default function Navbar() {
           
           {/* Brand Logo & Name */}
           <a href="#" className="flex items-center gap-3.5 group focus:outline-none">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600/30 to-blue-950/80 border border-blue-500/40 flex items-center justify-center text-blue-400 group-hover:border-blue-400 transition-all shadow-sm">
+            <div className="w-10 h-10 rounded-xl bg-[#12161F] border border-[#1E2638] flex items-center justify-center text-[#3ED6C4] group-hover:border-[#3ED6C4]/60 transition-all shadow-sm">
               <Shield className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-base font-bold text-white tracking-tight flex items-center gap-2.5">
+              <div className="text-base font-bold text-[#E6E9EF] tracking-tight flex items-center gap-2.5">
                 Varun Gandhi
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-950/80 text-emerald-400 border border-emerald-500/40">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-[#12161F] text-[#4ADE80] border border-[#4ADE80]/30">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4ADE80] animate-pulse mr-1.5"></span>
                   Open to Roles
                 </span>
               </div>
-              <p className="text-xs text-slate-400 font-normal hidden sm:block">
+              <p className="text-xs text-[#8B93A7] font-mono hidden sm:block">
                 Aspiring Cloud Security Engineer
               </p>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors focus:outline-none"
+                className="text-sm font-medium text-[#8B93A7] hover:text-[#3ED6C4] transition-colors focus:outline-none"
               >
                 {link.name}
               </a>
@@ -76,7 +77,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-blue-400 focus:outline-none"
+            className="md:hidden p-2 rounded-xl bg-[#12161F] border border-[#1E2638] text-[#8B93A7] hover:text-[#3ED6C4] focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -86,13 +87,13 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#070d19]/95 backdrop-blur-xl border-b border-slate-800 px-4 pt-4 pb-6 space-y-3 shadow-2xl">
+        <div className="md:hidden bg-[#0B0E14]/98 backdrop-blur-xl border-b border-[#1E2638] px-4 pt-4 pb-6 space-y-3 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm font-medium text-slate-300 hover:text-blue-400 py-2 border-b border-slate-800/50"
+              className="block text-sm font-medium text-[#8B93A7] hover:text-[#3ED6C4] py-2 border-b border-[#1E2638]/50"
             >
               {link.name}
             </a>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, ExternalLink, ChevronRight, CheckCircle2, AlertTriangle, X } from 'lucide-react';
+import { Shield, ExternalLink, ChevronRight, CheckCircle2, AlertTriangle, X, Filter } from 'lucide-react';
 
 export default function Projects() {
   const [showRulesModal, setShowRulesModal] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('All');
 
   const iamRules = [
     {
@@ -53,19 +54,13 @@ export default function Projects() {
   const projects = [
     {
       id: "iam-scanner",
-      title: "IAM Misconfiguration Scanner",
-      subtitle: "AWS Cloud Security Audit Tool",
-      badge: "Cloud Security",
-      badgeColor: "bg-blue-950/80 text-blue-400 border-blue-500/40",
-      description: "Python tool auditing AWS IAM via boto3 across users, roles, policies, trust relationships, MFA status, and access key age. Calculates identity risk scores and visualizes blast-radius graph.",
-      highlights: [
-        "6 detection rules, each mapped to a specific MITRE ATT&CK technique and severity level",
-        "Weighted risk-scoring model + NetworkX 'blast radius' graph mapping one-hop role assumption chains",
-        "Auto-generates Terraform remediation code for flagged security issues",
-        "Streamlit interactive dashboard + auto-generated PDF executive reports",
-        "Validated with 22 passing unit tests (pytest) across detection rules, risk scoring, and graph generation"
-      ],
-      stack: ["Python", "boto3", "NetworkX", "Streamlit", "pytest", "Terraform"],
+      category: "Cloud Security",
+      title: "AWS IAM Misconfiguration Scanner",
+      subtitle: "Automated Cloud Privilege & Risk Assessment Engine",
+      problem: "AWS IAM misconfigurations and overly permissive trust policies create hidden privilege escalation paths that traditional perimeter firewalls cannot detect.",
+      whatItDoes: "Audits active AWS IAM infrastructure via boto3 across users, roles, policies, trust relationships, MFA status, and access key age. Calculates risk scores and maps blast-radius graphs.",
+      contribution: "Authored 6 custom detection rules mapped to MITRE ATT&CK, built NetworkX one-hop role escalation graph engine, auto-generated Terraform remediation code, and verified engine with 22 passing unit tests.",
+      stack: ["Python", "boto3", "NetworkX", "Streamlit", "pytest", "Terraform", "MITRE ATT&CK"],
       githubUrl: "https://github.com/varungandhi29/iam-misconfiguration-scanner",
       githubLabel: "View Repository",
       hasRulesModal: true,
@@ -73,189 +68,174 @@ export default function Projects() {
     },
     {
       id: "honeyshield-v2",
+      category: "Deception Systems",
       title: "HoneyShield v2",
-      subtitle: "Deception-Based Security Visualization Platform",
-      badge: "Deception Platform",
-      badgeColor: "bg-emerald-950/80 text-emerald-400 border-emerald-500/40",
-      description: "Honeypot simulation platform featuring dual Admin and Attacker-facing dashboards for deception-based threat monitoring and intruder behavioral analysis.",
-      highlights: [
-        "Real-time visitor fingerprinting (IP, geolocation, browser, OS, device type) via geoip-lite and ua-parser-js",
-        "Interactive 3D global threat map (Three.js / React Three Fiber) visualizing attack origins",
-        "v2 architecture: FastAPI microservice layer, MongoDB storage, Socket.io real-time updates",
-        "Behavioral risk scoring engine and honey-profile redirection to lure and isolate attackers",
-        "Analytics dashboards (Recharts) tracking active sessions, threat frequency, and risk trends"
-      ],
+      subtitle: "Deception-Based Intruder Telemetry & Visualization Platform",
+      problem: "Traditional intrusion detection systems react after compromised entry rather than proactively luring, fingerprinting, and isolating attackers in decoy environments.",
+      whatItDoes: "Simulates vulnerable honeypot assets with dual Admin and Attacker-facing portals to capture malicious payloads, visitor fingerprints, and active sessions in real time.",
+      contribution: "Designed v2 microservice architecture (FastAPI + MongoDB), implemented 3D global threat map in Three.js/React Three Fiber, integrated visitor fingerprinting (geoip-lite + ua-parser-js), and built behavioral risk scoring.",
       stack: ["React", "Vite", "Tailwind CSS", "Three.js", "Node.js/Express", "FastAPI", "MongoDB", "Socket.io", "Recharts"],
       githubUrl: "https://github.com/varungandhi29/Honey-Profile-Project",
       githubLabel: "View Repository"
     },
     {
       id: "cloudseclab",
+      category: "Security Learning",
       title: "CloudSecLab",
-      subtitle: "Gamified Hands-On Cloud Security Learning Platform",
-      badge: "Learning Platform",
-      badgeColor: "bg-blue-950/80 text-blue-400 border-blue-500/40",
-      description: "TryHackMe-style interactive platform designed for practicing cloud security concepts through progressive, scenario-based labs and automated validation.",
-      highlights: [
-        "100 progressive levels covering cloud misconfigurations, IAM exploits, and defense mechanisms",
-        "Automated lab evaluation engine, instant certificate generation, and competitive leaderboard",
-        "Hands-on practice scenarios matching real-world cloud security incident responses"
-      ],
-      stack: ["Cloud Security", "Gamified Learning", "Full-Stack", "Certificates"],
+      subtitle: "Interactive Gamified Cloud Security Vulnerability Platform",
+      problem: "Aspiring security engineers lack safe, structured, hands-on environments to practice real-world cloud vulnerability exploitation and remediation.",
+      whatItDoes: "TryHackMe-style learning environment offering 100 progressive levels covering cloud misconfigurations, IAM exploits, and defense strategies.",
+      contribution: "Developed progressive lab scenario engine, automated evaluation validator, instant certificate generation workflow, and competitive student leaderboard.",
+      stack: ["Cloud Security", "Gamified Learning", "Full-Stack", "Certificates", "Linux CLI"],
       githubUrl: "https://github.com/varungandhi29",
       githubLabel: "View GitHub Profile"
     }
   ];
 
+  const filterCategories = ['All', 'Cloud Security', 'Deception Systems', 'Security Learning'];
+
+  const filteredProjects = activeFilter === 'All' 
+    ? projects 
+    : projects.filter(p => p.category === activeFilter);
+
   return (
-    <section id="projects" className="py-24 relative bg-[#070d19]">
+    <section id="projects" className="py-24 relative bg-[#0B0E14] border-t border-[#1E2638]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 bg-blue-950/80 px-3 py-1 rounded-full border border-blue-500/40 mb-3 shadow-sm">
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-[#3ED6C4] bg-[#12161F] px-3 py-1 rounded-full border border-[#1E2638] mb-3">
               <Shield className="w-3.5 h-3.5" />
-              <span>Core Portfolio</span>
+              <span>PROJECT_CASE_STUDIES</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              Security Projects
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#E6E9EF] tracking-tight">
+              Featured Security Projects
             </h2>
           </div>
 
-          <div className="text-xs font-semibold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-3.5 py-1.5 rounded-xl flex items-center gap-2 self-start sm:self-auto font-sans shadow-sm">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            <span>3 Security Projects Featured</span>
+          {/* Filter Bar */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <Filter className="w-4 h-4 text-[#8B93A7] mr-1 hidden sm:block" />
+            {filterCategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                className={`text-xs font-mono px-3.5 py-1.5 rounded-xl border transition-all ${
+                  activeFilter === cat
+                    ? 'bg-[#3ED6C4] text-[#0B0E14] font-bold border-[#3ED6C4]'
+                    : 'bg-[#12161F] text-[#8B93A7] border-[#1E2638] hover:text-[#E6E9EF] hover:border-[#3ED6C4]/40'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Cloud Security Visual Banner Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="ent-card rounded-2xl overflow-hidden mb-12 grid grid-cols-1 lg:grid-cols-12 items-center"
-        >
-          <div className="lg:col-span-7 p-7 sm:p-9 space-y-4">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 bg-blue-950/80 px-3 py-1 rounded-full border border-blue-500/40">
-              <Shield className="w-3.5 h-3.5" />
-              <span>Infrastructure & Cloud Defense</span>
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Cloud Security Architecture & IAM Threat Auditing
-            </h3>
-            <p className="text-sm text-slate-300 leading-relaxed font-sans">
-              Engineering deception honeypots, automated IAM privilege scanners, and cloud learning platforms to detect, isolate, and audit infrastructure vulnerabilities.
-            </p>
-          </div>
-          <div className="lg:col-span-5 relative aspect-[16/9] lg:aspect-auto h-full overflow-hidden bg-slate-950 border-t lg:border-t-0 lg:border-l border-slate-800">
-            <img
-              src="/assets/cloud_security.jpg"
-              alt="Cloud Security Infrastructure Illustration"
-              className="w-full h-full object-cover filter contrast-[1.05]"
-              loading="lazy"
-            />
-          </div>
-        </motion.div>
-
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+        <div className="space-y-8">
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="ent-card rounded-2xl p-7 flex flex-col justify-between group"
+              transition={{ duration: 0.35, delay: index * 0.08 }}
+              className="tech-card rounded-2xl p-7 sm:p-9 space-y-6"
             >
-              <div className="space-y-5">
-                {/* Header Strip */}
-                <div className="flex items-center justify-between gap-2">
-                  <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${project.badgeColor}`}>
-                    {project.badge}
+              {/* Card Top Strip */}
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <span className="text-xs font-mono font-semibold text-[#3ED6C4] bg-[#0B0E14] px-3 py-1 rounded-full border border-[#1E2638]">
+                  {project.category}
+                </span>
+
+                {project.unitTests && (
+                  <span className="text-xs font-mono font-medium text-[#4ADE80] bg-[#0B0E14] px-3 py-1 rounded-lg border border-[#4ADE80]/30 flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    {project.unitTests}
                   </span>
-                  
-                  {project.unitTests && (
-                    <span className="text-xs font-semibold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/40 flex items-center gap-1 font-mono">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                      {project.unitTests}
-                    </span>
-                  )}
-                </div>
-
-                {/* Title & Subtitle */}
-                <div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs font-semibold text-blue-400 mt-1">
-                    {project.subtitle}
-                  </p>
-                </div>
-
-                {/* Main Description */}
-                <p className="text-sm text-slate-300 leading-relaxed font-sans">
-                  {project.description}
-                </p>
-
-                {/* Bullet Highlights */}
-                <div className="space-y-2 pt-2 border-t border-slate-800">
-                  <h4 className="text-xs text-slate-400 font-bold uppercase tracking-wider">
-                    Key Architectural Features:
-                  </h4>
-                  <ul className="space-y-2 text-xs text-slate-300 font-sans">
-                    {project.highlights.map((item, hIdx) => (
-                      <li key={hIdx} className="flex items-start gap-2.5">
-                        <ChevronRight className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Modal Button for IAM Scanner Rules */}
-                {project.hasRulesModal && (
-                  <div className="pt-2">
-                    <button
-                      onClick={() => setShowRulesModal(true)}
-                      className="w-full text-xs font-semibold text-blue-300 bg-blue-950/80 hover:bg-blue-900/80 border border-blue-500/40 py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
-                    >
-                      <AlertTriangle className="w-4 h-4 text-blue-400" />
-                      Inspect 6 Detection Rules & MITRE Mapping
-                    </button>
-                  </div>
                 )}
               </div>
 
+              {/* Title & Subtitle */}
+              <div>
+                <h3 className="text-2xl font-bold text-[#E6E9EF]">
+                  {project.title}
+                </h3>
+                <p className="text-xs font-mono text-[#3ED6C4] mt-1">
+                  {project.subtitle}
+                </p>
+              </div>
+
+              {/* Problem / What it Does / Contribution Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-2 border-t border-[#1E2638]">
+                <div className="space-y-1.5">
+                  <h4 className="text-xs font-mono font-bold text-[#E8A33D] uppercase tracking-wider">
+                    PROBLEM STATEMENT:
+                  </h4>
+                  <p className="text-xs text-[#8B93A7] font-sans leading-relaxed">
+                    {project.problem}
+                  </p>
+                </div>
+
+                <div className="space-y-1.5">
+                  <h4 className="text-xs font-mono font-bold text-[#3ED6C4] uppercase tracking-wider">
+                    SYSTEM ARCHITECTURE:
+                  </h4>
+                  <p className="text-xs text-[#8B93A7] font-sans leading-relaxed">
+                    {project.whatItDoes}
+                  </p>
+                </div>
+
+                <div className="space-y-1.5">
+                  <h4 className="text-xs font-mono font-bold text-[#4ADE80] uppercase tracking-wider">
+                    SPECIFIC CONTRIBUTION:
+                  </h4>
+                  <p className="text-xs text-[#8B93A7] font-sans leading-relaxed">
+                    {project.contribution}
+                  </p>
+                </div>
+              </div>
+
+              {/* Rules Inspection Trigger Button */}
+              {project.hasRulesModal && (
+                <div className="pt-2">
+                  <button
+                    onClick={() => setShowRulesModal(true)}
+                    className="w-full text-xs font-mono font-semibold text-[#3ED6C4] bg-[#0B0E14] hover:bg-[#18202F] border border-[#3ED6C4]/40 py-2.5 rounded-xl transition-all flex items-center justify-center gap-2"
+                  >
+                    <AlertTriangle className="w-4 h-4 text-[#E8A33D]" />
+                    Inspect 6 Detection Rules & MITRE ATT&CK Mapping
+                  </button>
+                </div>
+              )}
+
               {/* Card Footer */}
-              <div className="mt-6 pt-5 border-t border-slate-800 space-y-4">
+              <div className="pt-4 border-t border-[#1E2638] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex flex-wrap gap-1.5">
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="text-[11px] px-2.5 py-0.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 font-mono"
+                      className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-[#0B0E14] text-[#8B93A7] border border-[#1E2638]"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-blue-400 transition-colors group/link"
-                  >
-                    <svg className="w-4 h-4 text-blue-400 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                    <span className="underline underline-offset-4">{project.githubLabel}</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
-                  </a>
-                </div>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#E6E9EF] hover:text-[#3ED6C4] transition-colors self-start sm:self-auto"
+                >
+                  <svg className="w-4 h-4 text-[#3ED6C4] fill-current" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span className="underline underline-offset-4">{project.githubLabel}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-[#8B93A7]" />
+                </a>
               </div>
 
             </motion.div>
@@ -265,26 +245,26 @@ export default function Projects() {
         {/* Clean Detection Rules Modal */}
         <AnimatePresence>
           {showRulesModal && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B0E14]/90 backdrop-blur-md">
               <motion.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
-                className="ent-card max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-2xl p-6 sm:p-8 space-y-6 bg-[#0a101d] shadow-2xl"
+                className="tech-card max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-2xl p-6 sm:p-8 space-y-6 bg-[#12161F] shadow-2xl"
               >
                 {/* Header */}
-                <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div className="flex items-center justify-between pb-4 border-b border-[#1E2638]">
                   <div>
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className="text-lg font-bold text-[#E6E9EF]">
                       IAM Misconfiguration Detection Rules
                     </h3>
-                    <p className="text-xs text-slate-400 mt-0.5">
-                      MITRE ATT&CK Mapped Detection Modules
+                    <p className="text-xs font-mono text-[#8B93A7] mt-0.5">
+                      MITRE ATT&CK Mapped Detection Engine
                     </p>
                   </div>
                   <button
                     onClick={() => setShowRulesModal(false)}
-                    className="p-1.5 rounded-xl bg-slate-900 text-slate-400 hover:text-white"
+                    className="p-1.5 rounded-xl bg-[#0B0E14] text-[#8B93A7] hover:text-[#E6E9EF]"
                   >
                     <X className="w-5 h-5" />
                   </button>
@@ -295,27 +275,27 @@ export default function Projects() {
                   {iamRules.map((rule) => (
                     <div
                       key={rule.id}
-                      className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2"
+                      className="p-4 rounded-xl bg-[#0B0E14] border border-[#1E2638] space-y-2"
                     >
                       <div className="flex items-center justify-between text-xs font-mono">
-                        <span className="text-blue-400 font-bold">{rule.id}</span>
+                        <span className="text-[#3ED6C4] font-bold">{rule.id}</span>
                         <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                           rule.severity === 'CRITICAL' 
                             ? 'bg-rose-950 text-rose-400 border border-rose-500/40' 
                             : rule.severity === 'HIGH'
-                            ? 'bg-amber-950 text-amber-400 border border-amber-500/40'
-                            : 'bg-slate-800 text-slate-300'
+                            ? 'bg-[#E8A33D]/15 text-[#E8A33D] border border-[#E8A33D]/40'
+                            : 'bg-[#1E2638] text-[#8B93A7]'
                         }`}>
                           {rule.severity}
                         </span>
                       </div>
-                      <h4 className="font-bold text-sm text-white">
+                      <h4 className="font-bold text-sm text-[#E6E9EF]">
                         {rule.name}
                       </h4>
-                      <div className="font-mono text-[11px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded w-max border border-emerald-500/40 font-semibold">
+                      <div className="font-mono text-[11px] text-[#4ADE80] bg-[#4ADE80]/10 px-2 py-0.5 rounded w-max border border-[#4ADE80]/30 font-semibold">
                         MITRE: {rule.mitre}
                       </div>
-                      <p className="text-xs text-slate-300 font-sans pt-1 leading-relaxed">
+                      <p className="text-xs text-[#8B93A7] font-sans pt-1 leading-relaxed">
                         {rule.desc}
                       </p>
                     </div>
@@ -323,8 +303,8 @@ export default function Projects() {
                 </div>
 
                 {/* Footer */}
-                <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-                  <span className="text-slate-400 font-mono font-semibold">22 Pytest Unit Tests Passing</span>
+                <div className="pt-4 border-t border-[#1E2638] flex items-center justify-between text-xs font-mono">
+                  <span className="text-[#4ADE80]">22 Pytest Unit Tests Passing</span>
                   <button
                     onClick={() => setShowRulesModal(false)}
                     className="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold"

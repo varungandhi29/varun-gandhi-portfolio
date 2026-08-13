@@ -10,80 +10,71 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #070d19;
-    color: #cbd5e1;
+    background-color: #0B0E14;
+    color: #E6E9EF;
     letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
-    color: #ffffff;
+    color: #E6E9EF;
     letter-spacing: -0.02em;
   }
 }
 
-/* Rich Multi-Tone Corporate Gradients */
-.bg-hero-gradient {
-  background: 
-    radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.18) 0%, transparent 70%),
-    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.12) 0%, transparent 50%),
-    linear-gradient(180deg, #0b1329 0%, #0f172a 60%, #070d19 100%);
+/* Subtle Technical Dot-Grid Background Overlay */
+.bg-tech-grid {
+  background-color: #0B0E14;
+  background-image: 
+    radial-gradient(rgba(62, 214, 196, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
 }
 
-.bg-slate-navy {
-  background-color: #070d19;
+/* Elevated Technical Surface Card */
+.tech-card {
+  background: #12161F;
+  border: 1px solid #1E2638;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bg-cobalt-navy {
-  background-color: #0b132b;
+.tech-card:hover {
+  border-color: rgba(62, 214, 196, 0.4);
+  box-shadow: 0 8px 30px -4px rgba(62, 214, 196, 0.12);
+  transform: translateY(-2px);
 }
 
-
-/* Rich Corporate Card Surface */
-.ent-card {
-  background: linear-gradient(135deg, rgba(17, 28, 56, 0.75) 0%, rgba(11, 19, 41, 0.85) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.ent-card:hover {
-  border-color: rgba(59, 130, 246, 0.5);
-  box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
-  transform: translateY(-3px);
-}
-
-/* Royal Cobalt Button */
+/* Primary Cyan-Teal Button */
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  color: #ffffff;
-  font-weight: 600;
-  border: 1px solid rgba(96, 165, 250, 0.4);
-  box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.4);
+  background: #3ED6C4;
+  color: #0B0E14;
+  font-weight: 700;
+  border: 1px solid rgba(62, 214, 196, 0.8);
+  box-shadow: 0 4px 14px 0 rgba(62, 214, 196, 0.25);
   transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  box-shadow: 0 6px 22px 0 rgba(59, 130, 246, 0.5);
+  background: #22D3B8;
+  box-shadow: 0 6px 20px 0 rgba(62, 214, 196, 0.35);
   transform: translateY(-1px);
 }
 
-/* Secondary Button */
+/* Secondary Dark Surface Button */
 .btn-secondary {
-  background: rgba(17, 28, 56, 0.9);
-  color: #e2e8f0;
+  background: #12161F;
+  color: #E6E9EF;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid #1E2638;
   transition: all 0.2s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(30, 48, 92, 0.95);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff;
+  background: #18202F;
+  border-color: rgba(62, 214, 196, 0.3);
+  color: #3ED6C4;
 }
 
 /* Minimal Scrollbar */
@@ -91,17 +82,17 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #070d19;
+  background: #0B0E14;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #1E2638;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #3ED6C4;
 }
 
-/* Reduced motion */
+/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
