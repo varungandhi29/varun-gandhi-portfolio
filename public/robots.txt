@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://varungandhi.dev/sitemap.xml
+Sitemap: https://varun-gandhi-portfolio.vercel.app/sitemap.xml
+
