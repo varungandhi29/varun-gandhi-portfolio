@@ -1,16 +1,64 @@
-# React + Vite
+# Varun Gandhi - Security Engineering Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, high-performance portfolio website showcasing cybersecurity engineering, cloud security automation, IAM auditing tools, and deception systems.
 
-Currently, two official plugins are available:
+🔗 **Live Portfolio**: [https://varun-gandhi-portfolio.vercel.app/](https://varun-gandhi-portfolio.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Featured Projects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. AWS IAM Misconfiguration Scanner
+- **Category**: Cloud Security
+- **Description**: Automated cloud privilege & risk assessment engine built with Python (`boto3`), NetworkX, and Streamlit.
+- **Repository**: [iam-misconfiguration-scanner](https://github.com/varungandhi29/iam-misconfiguration-scanner)
 
-## Expanding the Oxlint configuration
+### 2. Honey Profile Project
+- **Category**: Deception Systems
+- **Description**: Deception-based intruder telemetry & visualization platform with 3D threat mapping, visitor fingerprinting, and dynamic honeypot profile redirection.
+- **Repository**: [Honey-Profile-Project](https://github.com/varungandhi29/Honey-Profile-Project)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 3. CloudSecLab
+- **Category**: Security Learning
+- **Description**: Interactive gamified cloud security vulnerability platform with 100 progressive levels.
+- **Repository**: [varungandhi29](https://github.com/varungandhi29)
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend Framework**: React 19, Vite
+- **Styling**: Tailwind CSS
+- **Animations & Icons**: Framer Motion, Lucide React
+- **SEO & Meta**: Open Graph, JSON-LD (`Person` Schema), Canonical tags, XML Sitemap, Google Search Console integration
+
+---
+
+## 💻 Local Development Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/varungandhi29/varun-gandhi-portfolio.git
+   cd varun-gandhi-portfolio
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start local dev server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
