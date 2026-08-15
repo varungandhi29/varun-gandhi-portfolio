@@ -67,9 +67,9 @@ export default function Projects() {
       unitTests: "22 Unit Tests Passed"
     },
     {
-      id: "honeyshield-v2",
+      id: "honey-profile-project",
       category: "Deception Systems",
-      title: "HoneyShield v2",
+      title: "Honey Profile Project",
       subtitle: "Deception-Based Intruder Telemetry & Visualization Platform",
       problem: "Traditional intrusion detection systems react after compromised entry rather than proactively luring, fingerprinting, and isolating attackers in decoy environments.",
       whatItDoes: "Simulates vulnerable honeypot assets with dual Admin and Attacker-facing portals to capture malicious payloads, visitor fingerprints, and active sessions in real time.",
