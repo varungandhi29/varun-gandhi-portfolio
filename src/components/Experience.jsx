@@ -67,7 +67,7 @@ export default function Experience() {
                 <span>Internship · 7th Semester</span>
               </div>
               <h3 className="text-2xl font-bold text-[#0F172A]">
-                Data Analyst Intern — Inovexia
+                Data Analyst Intern — Innovexis
               </h3>
               <p className="text-xs font-mono text-[#64748B] mt-1 font-medium">
                 3 End-to-End Analytics, Data Engineering & Visualization Workstreams
