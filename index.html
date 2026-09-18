@@ -1,2724 +1,925 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0A0A0A" />
-
-  <!-- Primary Meta Tags -->
-  <title>Varun Gandhi | Aspiring Cybersecurity Engineer — Cloud Security Focus</title>
-  <meta name="title" content="Varun Gandhi | Aspiring Cybersecurity Engineer — Cloud Security Focus" />
-  <meta name="description" content="Varun Gandhi Portfolio — Aspiring Cybersecurity Engineer with Cloud Security Focus. Final-year B.Tech IT student at Parul University, Vadodara. Building IAM auditing tools, deception platforms, and cloud security labs." />
-  <meta name="keywords" content="Varun Gandhi, Cybersecurity Engineer, Cloud Security, IAM Auditing, Deception Platforms, HoneyShield, CloudSecLab, Parul University, Vadodara, Gujarat, AWS Security" />
-  <meta name="author" content="Varun Gandhi" />
-  <link rel="canonical" href="https://varun-gandhi-portfolio.vercel.app/" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-  <!-- Open Graph / Facebook / WhatsApp -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://varun-gandhi-portfolio.vercel.app/" />
-  <meta property="og:title" content="Varun Gandhi | Aspiring Cybersecurity Engineer — Cloud Security Focus" />
-  <meta property="og:description" content="Final-year B.Tech IT student at Parul University. Focused on building practical AWS IAM auditing tools, threat deception platforms, and cloud security labs." />
-  <meta property="og:image" content="https://varun-gandhi-portfolio.vercel.app/favicon.svg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:url" content="https://varun-gandhi-portfolio.vercel.app/" />
-  <meta property="twitter:title" content="Varun Gandhi | Aspiring Cybersecurity Engineer" />
-  <meta property="twitter:description" content="Final-year B.Tech IT student at Parul University. Cloud Security & IAM Focus." />
-
-  <!-- Structured Data (JSON-LD) for Search & AI Engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Varun Gandhi",
-    "url": "https://varun-gandhi-portfolio.vercel.app/",
-    "jobTitle": "Cybersecurity Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Parul University"
-    },
-    "alumniOf": "Parul University",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vadodara",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://github.com/varungandhi29",
-      "https://linkedin.com/in/varun-gandhi-348716307"
-    ],
-    "knowsAbout": [
-      "Cloud Security",
-      "AWS IAM Auditing",
-      "Deception Systems",
-      "Threat Detection",
-      "Python",
-      "FastAPI",
-      "React",
-      "Docker"
-    ]
-  }
-  </script>
-
-  <!-- Google Fonts: Inter & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome 6 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
-    /* ==========================================================================
-       DESIGN SYSTEM & CSS VARIABLES (adityaseth.in Inspired Clean Dark Aesthetic)
-       ========================================================================== */
-    :root {
-      --bg-primary: #0A0A0A;
-      --bg-surface: #111111;
-      --bg-surface-elevated: #161616;
-      --bg-surface-card: #121212;
-      --bg-surface-hover: #191919;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(0, 212, 255, 0.35);
-      --border-focus: #00D4FF;
-      --accent: #00D4FF;
-      --accent-rgb: 0, 212, 255;
-      --accent-glow: rgba(0, 212, 255, 0.15);
-      --accent-dim: rgba(0, 212, 255, 0.08);
-      --text-primary: #FFFFFF;
-      --text-secondary: #888888;
-      --text-body: #A5A5A5;
-      --text-muted: #555555;
-      --badge-bg: #181818;
-      --radius-badge: 4px;
-      --radius-card: 8px;
-      --radius-button: 6px;
-      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      --container-max: 1140px;
-    }
-
-    /* Reset & Base Setup */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-    }
-
-    body {
-      font-family: var(--font-ui);
-      background-color: var(--bg-primary);
-      color: var(--text-body);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 80% 60%, rgba(0, 212, 255, 0.03) 0%, transparent 40%);
-      background-attachment: fixed;
-    }
-
-    ::selection {
-      background: var(--accent);
-      color: #000000;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color var(--transition-fast);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button, input, textarea {
-      font-family: inherit;
-      color: inherit;
-    }
-
-    /* ==========================================================================
-       LAYOUT UTILITIES
-       ========================================================================== */
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-
-    section {
-      padding: 100px 0;
-      position: relative;
-    }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 70px 0;
-      }
-      .container {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-    }
-
-    /* Section Headings */
-    .section-header {
-      margin-bottom: 48px;
-    }
-
-    .section-header.text-center {
-      text-align: center;
-    }
-
-    .section-tag {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-    }
-
-    .section-subtitle {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      margin-top: 10px;
-      max-width: 620px;
-      line-height: 1.6;
-    }
-
-    .section-header.text-center .section-subtitle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* ==========================================================================
-       NAVIGATION BAR
-       ========================================================================== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(10, 10, 10, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      transition: background var(--transition-smooth), border-color var(--transition-smooth);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .brand-logo {
-      width: 36px;
-      height: 36px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 0.95rem;
-      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-    }
-
-    .nav-brand:hover .brand-logo {
-      border-color: var(--accent);
-      box-shadow: 0 0 14px var(--accent-glow);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .status-dot {
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      background-color: #10B981;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #10B981;
-      animation: pulse-green 2s infinite;
-    }
-
-    @keyframes pulse-green {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
-    }
-
-    .brand-role {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-secondary);
-      letter-spacing: 0.02em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      position: relative;
-      transition: color var(--transition-fast);
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--text-primary);
-    }
-
-    .nav-links a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 1px;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .btn-nav {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: var(--radius-button);
-      background: transparent;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all var(--transition-fast);
-    }
-
-    .btn-nav:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-dim);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-primary);
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-button);
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      transition: all var(--transition-fast);
-    }
-
-    .menu-toggle:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* Mobile Drawer */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      background: rgba(10, 10, 10, 0.98);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 24px;
-      z-index: 999;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .mobile-menu.open {
-      display: flex;
-    }
-
-    .mobile-menu a {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .mobile-menu a:hover {
-      color: var(--accent);
-    }
-
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .menu-toggle { display: flex; }
-    }
-
-    /* ==========================================================================
-       BUTTONS & CHIPS
-       ========================================================================== */
-    .btn {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 12px 24px;
-      border-radius: var(--radius-button);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: all var(--transition-fast);
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #000000;
-      box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
-    }
-
-    .btn-primary:hover {
-      background: #33dcff;
-      box-shadow: 0 0 28px rgba(0, 212, 255, 0.45);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border-color: var(--border-subtle);
-      color: var(--text-primary);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-dim);
-      transform: translateY(-2px);
-    }
-
-    .btn-ghost {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(255, 255, 255, 0.08);
-      color: var(--text-secondary);
-    }
-
-    .btn-ghost:hover {
-      color: var(--text-primary);
-      border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
-
-    /* Badges */
-    .badge {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: var(--radius-badge);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--badge-bg);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-      line-height: 1.4;
-    }
-
-    .badge.badge-accent {
-      background: var(--accent-dim);
-      border-color: rgba(0, 212, 255, 0.3);
-      color: var(--accent);
-    }
-
-    .badge.badge-green {
-      background: rgba(16, 185, 129, 0.08);
-      border-color: rgba(16, 185, 129, 0.3);
-      color: #10B981;
-    }
-
-    /* ==========================================================================
-       HERO SECTION
-       ========================================================================== */
-    .section-hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 140px;
-      padding-bottom: 80px;
-      position: relative;
-    }
-
-    .hero-content {
-      text-align: center;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .hero-pretitle {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .hero-name {
-      font-size: 4.2rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      margin-bottom: 16px;
-    }
-
-    @media (max-width: 768px) {
-      .hero-name {
-        font-size: 2.8rem;
-      }
-    }
-
-    .hero-typing-line {
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      color: var(--accent);
-      min-height: 34px;
-      margin-bottom: 24px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-    }
-
-    .typing-cursor {
-      display: inline-block;
-      opacity: 1;
-      animation: blink 0.9s infinite;
-      margin-left: 2px;
-      color: var(--accent);
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
-    .hero-bio {
-      font-size: 1.15rem;
-      color: var(--text-body);
-      max-width: 700px;
-      margin: 0 auto 32px;
-      line-height: 1.7;
-    }
-
-    .hero-meta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 36px;
-    }
-
-    .hero-meta-item {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      padding: 6px 14px;
-      border-radius: var(--radius-badge);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero-meta-item i {
-      color: var(--accent);
-    }
-
-    .hero-ctas {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    /* Scroll Indicator */
-    .scroll-indicator {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: var(--text-muted);
-      transition: color var(--transition-fast);
-    }
-
-    .scroll-indicator:hover {
-      color: var(--accent);
-    }
-
-    .scroll-mouse {
-      width: 22px;
-      height: 36px;
-      border: 2px solid currentColor;
-      border-radius: 12px;
-      position: relative;
-    }
-
-    .scroll-wheel {
-      width: 3px;
-      height: 7px;
-      background: currentColor;
-      border-radius: 2px;
-      position: absolute;
-      top: 6px;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: wheel-scroll 1.8s infinite;
-    }
-
-    @keyframes wheel-scroll {
-      0% { top: 6px; opacity: 1; }
-      100% { top: 18px; opacity: 0; }
-    }
-
-    .scroll-text {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    /* ==========================================================================
-       ABOUT SECTION
-       ========================================================================== */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .about-text {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--text-body);
-    }
-
-    .about-text p {
-      margin-bottom: 20px;
-    }
-
-    .about-text strong {
-      color: var(--text-primary);
-      font-weight: 600;
-    }
-
-    .about-text .highlight {
-      color: var(--accent);
-    }
-
-    .about-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 24px;
-      transition: border-color var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-smooth);
-    }
-
-    .card:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    .card-title {
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .card-heading {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-    }
-
-    .card-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    /* Animated Stat Counters */
-    .stats-strip {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .stats-strip {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .stats-strip {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .stat-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 24px 20px;
-      text-align: center;
-      transition: all var(--transition-fast);
-    }
-
-    .stat-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
-    }
-
-    .stat-number {
-      font-family: var(--font-mono);
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: var(--accent);
-      line-height: 1.1;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-top: 6px;
-    }
-
-    .stat-detail {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
-
-    /* ==========================================================================
-       SKILLS SECTION
-       ========================================================================== */
-    .skills-badges-wrap {
-      margin-bottom: 48px;
-    }
-
-    .skills-badges-label {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .badges-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill-badge {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-primary);
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      padding: 10px 18px;
-      border-radius: var(--radius-badge);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all var(--transition-fast);
-      cursor: default;
-    }
-
-    .skill-badge i {
-      font-size: 1.1rem;
-      color: var(--accent);
-      transition: transform var(--transition-fast);
-    }
-
-    .skill-badge:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--bg-surface-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 14px var(--accent-glow);
-    }
-
-    .skill-badge:hover i {
-      transform: scale(1.15);
-    }
-
-    /* Skills Clusters Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 768px) {
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .skill-category-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 28px;
-      transition: all var(--transition-smooth);
-    }
-
-    .skill-category-card:hover {
-      border-color: var(--border-hover);
-    }
-
-    .category-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .category-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-card);
-      background: var(--accent-dim);
-      border: 1px solid rgba(0, 212, 255, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 1rem;
-    }
-
-    .category-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .skill-tag {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      padding: 5px 12px;
-      border-radius: var(--radius-badge);
-      background: #171717;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      color: var(--text-secondary);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all var(--transition-fast);
-    }
-
-    .skill-tag::before {
-      content: '';
-      width: 4px;
-      height: 4px;
-      background: var(--accent);
-      border-radius: 50%;
-      opacity: 0.6;
-    }
-
-    .skill-tag:hover {
-      border-color: var(--accent);
-      color: var(--text-primary);
-    }
-
-    /* ==========================================================================
-       PROJECTS SECTION (Cards with Clean Dark Aesthetic)
-       ========================================================================== */
-    .projects-filter {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 36px;
-    }
-
-    .filter-btn {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      padding: 6px 14px;
-      border-radius: var(--radius-button);
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-      cursor: pointer;
-      transition: all var(--transition-fast);
-    }
-
-    .filter-btn:hover {
-      color: var(--text-primary);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .filter-btn.active {
-      background: var(--accent);
-      color: #000000;
-      border-color: var(--accent);
-      font-weight: 600;
-    }
-
-    .projects-list {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    .project-card {
-      background: var(--bg-surface-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 36px;
-      position: relative;
-      overflow: hidden;
-      transition: all var(--transition-smooth);
-    }
-
-    @media (max-width: 768px) {
-      .project-card {
-        padding: 24px;
-      }
-    }
-
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--accent);
-      opacity: 0;
-      transition: opacity var(--transition-fast);
-    }
-
-    .project-card:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
-    }
-
-    .project-card:hover::before {
-      opacity: 1;
-    }
-
-    .project-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
-    }
-
-    .project-badges {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .project-title-wrap {
-      margin-bottom: 16px;
-    }
-
-    .project-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .project-subtitle {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      color: var(--accent);
-      margin-top: 4px;
-      font-weight: 500;
-    }
-
-    .project-desc {
-      font-size: 1rem;
-      color: var(--text-body);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .project-highlights {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-bottom: 24px;
-      background: #0E0E0E;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      border-radius: var(--radius-badge);
-      padding: 16px;
-    }
-
-    @media (max-width: 600px) {
-      .project-highlights {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .highlight-item {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-
-    .highlight-item i {
-      color: var(--accent);
-      margin-top: 4px;
-      font-size: 0.8rem;
-    }
-
-    .highlight-item strong {
-      color: var(--text-primary);
-    }
-
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 28px;
-    }
-
-    .tech-badge {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: var(--radius-badge);
-      background: #171717;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: #D1D5DB;
-    }
-
-    .project-links {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .project-btn {
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 10px 18px;
-      border-radius: var(--radius-button);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      transition: all var(--transition-fast);
-    }
-
-    .project-btn-primary {
-      background: var(--accent);
-      color: #000000;
-    }
-
-    .project-btn-primary:hover {
-      background: #33dcff;
-      box-shadow: 0 0 16px var(--accent-glow);
-      transform: translateY(-2px);
-    }
-
-    .project-btn-secondary {
-      background: #181818;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-primary);
-    }
-
-    .project-btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .project-badge-inactive {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* ==========================================================================
-       EXPERIENCE & WRITEUPS
-       ========================================================================== */
-    .experience-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 32px;
-      margin-bottom: 24px;
-    }
-
-    .exp-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border-subtle);
-      margin-bottom: 24px;
-    }
-
-    .exp-role {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .exp-company {
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      color: var(--accent);
-      margin-top: 4px;
-    }
-
-    .exp-date {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      background: var(--bg-primary);
-      border: 1px solid var(--border-subtle);
-      padding: 6px 12px;
-      border-radius: var(--radius-badge);
-    }
-
-    .workstreams-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .workstreams-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .workstream-card {
-      background: #0E0E0E;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all var(--transition-fast);
-    }
-
-    .workstream-card:hover {
-      border-color: var(--border-hover);
-    }
-
-    .ws-cat {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--accent);
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .ws-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-    }
-
-    .ws-metric {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: #10B981;
-      margin-bottom: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .ws-desc {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    /* Writeups Cards */
-    .writeups-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 900px) {
-      .writeups-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .writeup-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all var(--transition-smooth);
-    }
-
-    .writeup-card:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-3px);
-    }
-
-    .writeup-badge {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .writeup-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-
-    .writeup-summary {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    /* ==========================================================================
-       GITHUB STATS SECTION
-       ========================================================================== */
-    .github-stats-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .github-stats-container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .stat-embed-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      transition: border-color var(--transition-fast);
-    }
-
-    .stat-embed-card:hover {
-      border-color: var(--accent);
-    }
-
-    .stat-embed-card img {
-      width: 100%;
-      height: auto;
-      border-radius: var(--radius-badge);
-    }
-
-    .github-full-width {
-      grid-column: 1 / -1;
-    }
-
-    .github-profile-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-
-    .github-info {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .github-icon-large {
-      font-size: 2.5rem;
-      color: var(--accent);
-    }
-
-    .github-handle {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .github-sub {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-    }
-
-    /* ==========================================================================
-       CONTACT SECTION
-       ========================================================================== */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .contact-channels {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .channel-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: all var(--transition-fast);
-      text-decoration: none;
-    }
-
-    .channel-card:hover {
-      border-color: var(--accent);
-      transform: translateX(4px);
-    }
-
-    .channel-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .channel-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-card);
-      background: #171717;
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: var(--accent);
-    }
-
-    .channel-name {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .channel-value {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-    }
-
-    .channel-arrow {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      transition: color var(--transition-fast);
-    }
-
-    .channel-card:hover .channel-arrow {
-      color: var(--accent);
-    }
-
-    .email-copy-box {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .copy-email-btn {
-      width: 100%;
-      padding: 10px;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 600;
-      background: #191919;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-primary);
-      border-radius: var(--radius-button);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all var(--transition-fast);
-    }
-
-    .copy-email-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* Contact Form */
-    .contact-form-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 32px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    @media (max-width: 600px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .form-label {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .form-control {
-      width: 100%;
-      background: #0D0D0D;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-button);
-      padding: 12px 16px;
-      font-size: 0.92rem;
-      color: var(--text-primary);
-      outline: none;
-      transition: border-color var(--transition-fast);
-    }
-
-    .form-control:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 10px var(--accent-glow);
-    }
-
-    textarea.form-control {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-note {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      margin-top: 12px;
-      text-align: center;
-    }
-
-    /* ==========================================================================
-       FOOTER
-       ========================================================================== */
-    .footer {
-      background: #080808;
-      border-top: 1px solid var(--border-subtle);
-      padding: 48px 0;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .footer-copy {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-    }
-
-    .footer-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-      transition: color var(--transition-fast);
-    }
-
-    .footer-links a:hover {
-      color: var(--accent);
-    }
-
-    .btn-top {
-      width: 36px;
-      height: 36px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-button);
-      color: var(--text-secondary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all var(--transition-fast);
-    }
-
-    .btn-top:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* ==========================================================================
-       SCROLL ANIMATIONS (Intersection Observer)
-       ========================================================================== */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .fade-up.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Varun Gandhi - Aspiring Cybersecurity Engineer | Cloud Security Focus</title>
+
+	<!-- ============ SEO Core ============ -->
+	<meta name="description"
+		content="Varun Gandhi - Aspiring Cybersecurity Engineer with Cloud Security Focus. Final-year B.Tech IT student at Parul University, Vadodara. Building IAM auditing tools, deception platforms, and cloud security labs.">
+	<meta name="keywords"
+		content="Varun Gandhi, cybersecurity engineer, cloud security, IAM auditor, Parul University, Vadodara, Gujarat, AWS security, honeypots, HoneyShield, CloudSecLab">
+	<meta name="author" content="Varun Gandhi">
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://varun-gandhi-portfolio.vercel.app/">
+	<meta name="theme-color" content="#191919">
+
+	<!-- ============ Open Graph ============ -->
+	<meta property="og:type" content="profile">
+	<meta property="og:profile:first_name" content="Varun">
+	<meta property="og:profile:last_name" content="Gandhi">
+	<meta property="og:site_name" content="Varun Gandhi - Portfolio">
+	<meta property="og:title" content="Varun Gandhi - Aspiring Cybersecurity Engineer | Cloud Security Focus">
+	<meta property="og:description"
+		content="Final-year B.Tech IT student at Parul University. Focused on building practical AWS IAM auditing tools, threat deception platforms, and cloud security labs.">
+	<meta property="og:url" content="https://varun-gandhi-portfolio.vercel.app/">
+
+	<!-- ============ Google Fonts & Icons ============ -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	<!-- Vendor CSS (Bootstrap, Swiper, Animate, Magnific) -->
+	<link rel="stylesheet" href="css/vendor.css">
+
+	<!-- Settings-panel -->
+	<link href="css/settings.css" rel="stylesheet">
+
+	<!-- Aditya Master Style CSS -->
+	<link rel="stylesheet" href="css/aditya.css">
+
+	<!-- Custom Style CSS (Aurora navbar, 3D cards, Material elevation) -->
+	<link href="css/custom.css" rel="stylesheet">
+
+	<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+	<link rel="icon" href="/favicon.svg" type="image/x-icon">
+
+	<style>
+		/* Custom enhancements for Varun Gandhi Portfolio */
+		.cert-card-icon i {
+			font-size: 40px;
+			margin-bottom: 10px;
+		}
+		.about-photo-circle {
+			width: 170px;
+			height: 170px;
+			border-radius: 50%;
+			border: 3px solid #2196F3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(33, 150, 243, 0.08);
+			box-shadow: 0 0 25px rgba(33, 150, 243, 0.35);
+			margin: 0 auto;
+		}
+		.about-photo-circle i {
+			font-size: 75px;
+			color: #42A5F5;
+		}
+		.github-stats-row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			justify-content: center;
+			margin-top: 30px;
+		}
+		.github-stats-card {
+			background: linear-gradient(145deg, #252525 0%, #1e1e1e 100%);
+			border: 1px solid rgba(33, 150, 243, 0.12);
+			border-radius: 12px;
+			padding: 16px;
+			overflow: hidden;
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+			transition: all 0.35s ease;
+		}
+		.github-stats-card:hover {
+			border-color: rgba(33, 150, 243, 0.4);
+			transform: translateY(-4px);
+			box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15);
+		}
+		.github-stats-card img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+		.project-card-custom {
+			background: linear-gradient(145deg, #252525 0%, #1e1e1e 100%);
+			border: 1px solid rgba(33, 150, 243, 0.1);
+			border-radius: 12px;
+			padding: 24px;
+			margin-bottom: 24px;
+			transition: all 0.35s ease;
+			position: relative;
+			overflow: hidden;
+		}
+		.project-card-custom:hover {
+			border-color: rgba(33, 150, 243, 0.3);
+			transform: translateY(-4px);
+			box-shadow: 0 8px 25px rgba(0,0,0,0.5), 0 0 20px rgba(33, 150, 243, 0.1);
+		}
+		.project-card-custom::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 4px;
+			height: 100%;
+			background: linear-gradient(180deg, #1976D2, #42A5F5);
+			opacity: 0;
+			transition: opacity 0.35s ease;
+		}
+		.project-card-custom:hover::before {
+			opacity: 1;
+		}
+		.tech-pill {
+			display: inline-block;
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 11px;
+			padding: 3px 10px;
+			margin: 3px;
+			border-radius: 4px;
+			background: #141414;
+			border: 1px solid rgba(255, 255, 255, 0.08);
+			color: #BBDEFB;
+		}
+	</style>
 </head>
 
-<body>
-
-  <!-- ==========================================================================
-       NAVIGATION
-       ========================================================================== -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#hero" class="nav-brand" aria-label="Varun Gandhi Home">
-        <div class="brand-logo">VG</div>
-        <div class="brand-text">
-          <span class="brand-name">
-            Varun Gandhi
-            <span class="status-dot" title="Available for opportunities"></span>
-          </span>
-          <span class="brand-role">Cloud Security & IAM</span>
-        </div>
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#github">GitHub</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-nav">
-          <i class="fa-solid fa-file-pdf"></i>
-          <span>Resume</span>
-        </a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
-          <i class="fa-solid fa-bars" id="menuIcon"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#experience" class="mobile-link">Experience</a>
-      <a href="#github" class="mobile-link">GitHub Stats</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-      <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-link" style="color: var(--accent);">
-        <i class="fa-solid fa-file-pdf"></i> Download Official Resume (.PDF)
-      </a>
-    </div>
-  </nav>
-
-  <!-- ==========================================================================
-       HERO SECTION
-       ========================================================================== -->
-  <section class="section-hero" id="hero">
-    <div class="container hero-content">
-      
-      <div class="hero-pretitle">
-        <span class="badge badge-accent">
-          <i class="fa-solid fa-shield-halved"></i>
-          Aspiring Cybersecurity Engineer — Cloud Security Focus
-        </span>
-      </div>
-
-      <h1 class="hero-name">Varun Gandhi</h1>
-
-      <p class="hero-typing-line" id="hero-typing">
-        <span class="typing-text"></span><span class="typing-cursor">|</span>
-      </p>
-
-      <p class="hero-bio">
-        Final-year B.Tech IT student at Parul University, Vadodara, graduating May 2027. Focused on building practical AWS IAM auditing tools, threat deception platforms, and cloud security labs for critical digital infrastructure.
-      </p>
-
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Vadodara, Gujarat, India</span>
-        </div>
-        <div class="hero-meta-item">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span>Parul University B.Tech IT '27</span>
-        </div>
-        <div class="hero-meta-item">
-          <i class="fa-solid fa-circle-check" style="color: #10B981;"></i>
-          <span>Open to Roles</span>
-        </div>
-      </div>
-
-      <div class="hero-ctas">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fa-solid fa-shield"></i>
-          View Projects
-        </a>
-        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <i class="fa-solid fa-file-arrow-down"></i>
-          Download Resume
-        </a>
-        <a href="#contact" class="btn btn-ghost">
-          <i class="fa-regular fa-envelope"></i>
-          Contact Me
-        </a>
-      </div>
-
-    </div>
-
-    <!-- Scroll Mouse Indicator -->
-    <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
-      </div>
-      <span class="scroll-text">Scroll</span>
-    </a>
-  </section>
-
-  <!-- ==========================================================================
-       ABOUT SECTION
-       ========================================================================== -->
-  <section id="about" class="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-terminal"></i> 01 // ABOUT</span>
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">A builder-first engineering mindset focused on systems defense, cloud telemetry, and proactive security architecture.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I am a final-year <strong>B.Tech Information Technology</strong> student at <strong>Parul University</strong> in Vadodara, Gujarat, India, graduating in May 2027.
-          </p>
-          <p>
-            Driven by a deep curiosity for how cloud infrastructure breaks and how to defend it, I have cultivated a pragmatic, hands-on engineering mindset focused on systems execution and real-world security utility. My journey in tech is defined by self-driven building—transforming theoretical security concepts into <span class="highlight">automated auditing engines, threat deception platforms, and resilient architectures</span>.
-          </p>
-          <p>
-            My technical specialization centers on <strong>Cloud Security & Infrastructure Auditing</strong>. I design and build tools for automated <strong>AWS IAM misconfiguration detection</strong>, honeypot threat deception, and interactive cloud vulnerability training.
-          </p>
-          <p>
-            My long-term career focus is dedicated to securing India's critical digital infrastructure across the <strong style="color: #10B981;">fintech, banking, and government sectors</strong>.
-          </p>
-        </div>
-
-        <div class="about-cards">
-          <div class="card">
-            <span class="card-title"><i class="fa-solid fa-briefcase"></i> Current Availability</span>
-            <h3 class="card-heading">Actively Seeking Opportunities</h3>
-            <p class="card-desc">Open to cybersecurity internships, entry-level cloud security roles, and remote engineering opportunities.</p>
-          </div>
-
-          <div class="card">
-            <span class="card-title"><i class="fa-solid fa-bullseye"></i> Long-Term Career Objective</span>
-            <h3 class="card-heading">Cloud Security Engineer (India)</h3>
-            <p class="card-desc">Dedicated to cloud defense, IAM policy auditing, and threat deception architectures for enterprise and national cyber resilience.</p>
-          </div>
-
-          <div class="card">
-            <span class="card-title"><i class="fa-solid fa-map-location-dot"></i> Base & Location</span>
-            <h3 class="card-heading">Vadodara, Gujarat, India</h3>
-            <p class="card-desc">Parul University B.Tech IT '27 · Open to on-site in major tech hubs & remote worldwide.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Numerical Stat Counters -->
-      <div class="stats-strip">
-        <div class="stat-card">
-          <div class="stat-number" data-target="50">0</div>
-          <div class="stat-label">IAM Tests Passing</div>
-          <div class="stat-detail">pytest Test Suite</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="100">0</div>
-          <div class="stat-label">Hands-on Cloud Labs</div>
-          <div class="stat-detail">CloudSecLab Platform</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="3">0</div>
-          <div class="stat-label">Production Platforms</div>
-          <div class="stat-detail">HoneyShield, IAM, Lab</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="103">0</div>
-          <div class="stat-label">Thousand Records</div>
-          <div class="stat-detail">103,000+ Records Analyzed</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SKILLS SECTION
-       ========================================================================== -->
-  <section id="skills" class="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-code"></i> 02 // SKILLS</span>
-        <h2 class="section-title">Technical Expertise & Tooling</h2>
-        <p class="section-subtitle">Core competencies across cloud defense, systems programming, deception architectures, and distributed infrastructure.</p>
-      </div>
-
-      <!-- Icon Badges Cloud (Explicitly Requested Badges) -->
-      <div class="skills-badges-wrap">
-        <div class="skills-badges-label">Core Technologies & Icon Badges</div>
-        <div class="badges-cloud">
-          <div class="skill-badge"><i class="fa-brands fa-python"></i><span>Python</span></div>
-          <div class="skill-badge"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
-          <div class="skill-badge"><i class="fa-brands fa-react"></i><span>React</span></div>
-          <div class="skill-badge"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
-          <div class="skill-badge"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-database"></i><span>MongoDB</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-layer-group"></i><span>Redis</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-bolt"></i><span>FastAPI</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-plug-circle-bolt"></i><span>Socket.io</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-brain"></i><span>Machine Learning</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-server"></i><span>LocalStack</span></div>
-          <div class="skill-badge"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-cubes"></i><span>Terraform</span></div>
-          <div class="skill-badge"><i class="fa-solid fa-network-wired"></i><span>NetworkX</span></div>
-          <div class="skill-badge"><i class="fa-brands fa-git-alt"></i><span>Git & GitHub</span></div>
-        </div>
-      </div>
-
-      <!-- Categorized Capability Clusters -->
-      <div class="skills-grid">
-        
-        <!-- Category 1: Cloud & IAM Security -->
-        <div class="skill-category-card">
-          <div class="category-header">
-            <div class="category-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-            <h3 class="category-title">Cloud Security & IAM Defense</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">AWS (IAM, EC2, S3, CloudWatch)</span>
-            <span class="skill-tag">IAM Policy Auditing</span>
-            <span class="skill-tag">Privilege Escalation Detection</span>
-            <span class="skill-tag">MITRE ATT&CK Mapping</span>
-            <span class="skill-tag">Terraform HCL Remediation</span>
-            <span class="skill-tag">Linux Hardening & Admin</span>
-            <span class="skill-tag">LocalStack Cloud Emulation</span>
-          </div>
-        </div>
-
-        <!-- Category 2: Programming & Scripting -->
-        <div class="skill-category-card">
-          <div class="category-header">
-            <div class="category-icon"><i class="fa-solid fa-terminal"></i></div>
-            <h3 class="category-title">Programming & Scripting</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python (boto3, NetworkX, Pandas)</span>
-            <span class="skill-tag">JavaScript (Node.js, Express)</span>
-            <span class="skill-tag">SQL & MySQL Relational Queries</span>
-            <span class="skill-tag">Bash & Linux Shell Scripting</span>
-            <span class="skill-tag">Pytest Unit Test Suites</span>
-            <span class="skill-tag">FastAPI REST Services</span>
-          </div>
-        </div>
-
-        <!-- Category 3: Security Tooling & Pentesting -->
-        <div class="skill-category-card">
-          <div class="category-header">
-            <div class="category-icon"><i class="fa-solid fa-shield-virus"></i></div>
-            <h3 class="category-title">Security Tooling & Deception</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Honeypot Systems</span>
-            <span class="skill-tag">Deception SOC Platforms</span>
-            <span class="skill-tag">Browser Fingerprinting</span>
-            <span class="skill-tag">Burp Suite</span>
-            <span class="skill-tag">Wireshark Network Analysis</span>
-            <span class="skill-tag">Nmap Port Scanning</span>
-            <span class="skill-tag">OWASP Top 10 API Security</span>
-          </div>
-        </div>
-
-        <!-- Category 4: Frameworks, Web & Data -->
-        <div class="skill-category-card">
-          <div class="category-header">
-            <div class="category-icon"><i class="fa-solid fa-diagram-project"></i></div>
-            <h3 class="category-title">Frameworks, Web & Telemetry</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">React & Modern UI</span>
-            <span class="skill-tag">FastAPI & High-Throughput APIs</span>
-            <span class="skill-tag">MongoDB & Document Storage</span>
-            <span class="skill-tag">Redis In-Memory Caching</span>
-            <span class="skill-tag">Socket.io Real-Time Telemetry</span>
-            <span class="skill-tag">Three.js 3D Threat Mapping</span>
-            <span class="skill-tag">Streamlit Analytics Dashboards</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       PROJECTS SECTION
-       ========================================================================== -->
-  <section id="projects" class="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-folder-closed"></i> 03 // PROJECTS</span>
-        <h2 class="section-title">Featured Security Projects</h2>
-        <p class="section-subtitle">Real-world cybersecurity systems, cloud IAM audit tools, and hands-on vulnerability training platforms.</p>
-      </div>
-
-      <!-- Filter Chips -->
-      <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="deception">Deception Systems</button>
-        <button class="filter-btn" data-filter="cloudsec">Cloud Security</button>
-        <button class="filter-btn" data-filter="learning">Security Learning</button>
-      </div>
-
-      <div class="projects-list">
-
-        <!-- Project 1: HoneyShield v2 -->
-        <article class="project-card" data-category="deception">
-          <div class="project-top">
-            <div class="project-badges">
-              <span class="badge badge-accent"><i class="fa-solid fa-shield-halved"></i> Deception Systems</span>
-              <span class="badge badge-green"><i class="fa-solid fa-circle-dot"></i> Live Production</span>
-            </div>
-            <span class="badge" style="font-family: var(--font-mono); font-size: 0.72rem;">Dual-System Architecture</span>
-          </div>
-
-          <div class="project-title-wrap">
-            <h3 class="project-title">HoneyShield v2</h3>
-            <p class="project-subtitle">Deception-Based SOC Dashboard & Threat Telemetry Platform</p>
-          </div>
-
-          <p class="project-desc">
-            Deception-based SOC dashboard with dual-system honeypot architecture. Real-time attack detection, AI behavioral scoring, browser fingerprint blocking, and silent attacker redirection via Bridge Layer.
-          </p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Dual-System Honeypot:</strong> Decoy attacker portals isolate and capture malicious payloads in real time.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>AI Behavioral Scoring:</strong> Random Forest model calculates intruder risk and automated threat response.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Browser Fingerprint Blocking:</strong> Detects and blocks malicious fingerprint profiles across sessions.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Bridge Layer Redirection:</strong> Transparently shifts high-threat actors into simulated trap assets.</span>
-            </div>
-          </div>
-
-          <div class="project-tech">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">MongoDB</span>
-            <span class="tech-badge">Redis</span>
-            <span class="tech-badge">Socket.io</span>
-            <span class="tech-badge">Random Forest</span>
-            <span class="tech-badge">Three.js</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://honeyprofile.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              <span>Live Demo</span>
-            </a>
-            <a href="https://github.com/varungandhi29/Honey-Profile-Project" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-              <i class="fa-brands fa-github"></i>
-              <span>View Repository</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 2: IAM Misconfiguration Scanner -->
-        <article class="project-card" data-category="cloudsec">
-          <div class="project-top">
-            <div class="project-badges">
-              <span class="badge badge-accent"><i class="fa-solid fa-cloud"></i> Cloud Security</span>
-              <span class="badge badge-green"><i class="fa-solid fa-circle-check"></i> 50 Tests Passing</span>
-            </div>
-            <span class="badge" style="font-family: var(--font-mono); font-size: 0.72rem;">MITRE ATT&CK Mapped</span>
-          </div>
-
-          <div class="project-title-wrap">
-            <h3 class="project-title">IAM Misconfiguration Scanner</h3>
-            <p class="project-subtitle">Automated AWS Privilege & Risk Assessment Engine</p>
-          </div>
-
-          <p class="project-desc">
-            Cloud security audit tool scanning AWS IAM for misconfigurations. 50 tests passing. Detects wildcard permissions, privilege escalation paths, MFA gaps, and generates Terraform HCL remediation code.
-          </p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>50 Unit Tests Passing:</strong> Comprehensive pytest suite covering IAM policy evaluation logic.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Privilege Escalation Mapping:</strong> Identifies pass-role & permission combinations via NetworkX graphs.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Wildcard Detection:</strong> Flags unrestricted Action:* and Resource:* policies risking full cloud control.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Terraform HCL Remediation:</strong> Automatically outputs least-privilege infrastructure-as-code fixes.</span>
-            </div>
-          </div>
-
-          <div class="project-tech">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">FastAPI</span>
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">LocalStack</span>
-            <span class="tech-badge">networkx</span>
-            <span class="tech-badge">PyVis</span>
-            <span class="tech-badge">ReportLab</span>
-            <span class="tech-badge">boto3</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://github.com/varungandhi29/iam-misconfiguration-scanner" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-              <i class="fa-brands fa-github"></i>
-              <span>View Repository</span>
-            </a>
-            <span class="project-badge-inactive">
-              <i class="fa-solid fa-terminal"></i> CLI & Audit Engine (Not deployed)
-            </span>
-          </div>
-        </article>
-
-        <!-- Project 3: CloudSecLab -->
-        <article class="project-card" data-category="learning">
-          <div class="project-top">
-            <div class="project-badges">
-              <span class="badge badge-accent"><i class="fa-solid fa-flask"></i> Security Learning</span>
-              <span class="badge badge-green"><i class="fa-solid fa-circle-dot"></i> 100 Hands-on Labs</span>
-            </div>
-            <span class="badge" style="font-family: var(--font-mono); font-size: 0.72rem;">Multi-Cloud Emulation</span>
-          </div>
-
-          <div class="project-title-wrap">
-            <h3 class="project-title">CloudSecLab</h3>
-            <p class="project-subtitle">TryHackMe-Style Cloud Security Vulnerability Platform</p>
-          </div>
-
-          <p class="project-desc">
-            TryHackMe-style cloud security learning platform with 100 hands-on labs covering AWS, Azure, and GCP. Real LocalStack emulation, 4 verifiable certificates, timed exams.
-          </p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>100 Hands-on Labs:</strong> Progressive attack & defense scenarios across AWS, Azure, and Google Cloud.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Real LocalStack Emulation:</strong> Safe, isolated cloud mock sandbox requiring zero live cloud costs.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>4 Verifiable Certificates:</strong> Automated validation and cryptographic PDF certificate issuance.</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fa-solid fa-check"></i>
-              <span><strong>Timed Exams & Leaderboard:</strong> Rigorous scenario-based evaluations with competitive peer rankings.</span>
-            </div>
-          </div>
-
-          <div class="project-tech">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">FastAPI</span>
-            <span class="tech-badge">PostgreSQL</span>
-            <span class="tech-badge">Redis</span>
-            <span class="tech-badge">LocalStack</span>
-            <span class="tech-badge">JWT</span>
-            <span class="tech-badge">ReportLab</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://cloudseclab.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              <span>Live Demo</span>
-            </a>
-            <a href="https://github.com/varungandhi29/CloudSecLab" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
-              <i class="fa-brands fa-github"></i>
-              <span>View Repository</span>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       EXPERIENCE SECTION
-       ========================================================================== -->
-  <section id="experience" class="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-timeline"></i> 04 // EXPERIENCE</span>
-        <h2 class="section-title">Industry Internship & Analytics</h2>
-        <p class="section-subtitle">Real-world data engineering, relational querying, and executive telemetry delivered during internship.</p>
-      </div>
-
-      <div class="experience-card">
-        <div class="exp-header">
-          <div>
-            <h3 class="exp-role">Data Analyst Intern</h3>
-            <p class="exp-company">Innovexis · 7th Semester Internship</p>
-          </div>
-          <span class="exp-date"><i class="fa-regular fa-calendar"></i> 3 Core Workstreams Delivered</span>
-        </div>
-
-        <div class="workstreams-grid">
-          
-          <div class="workstream-card">
-            <div>
-              <span class="ws-cat">Data Engineering & SQL</span>
-              <h4 class="ws-title">OLA Ride Insights</h4>
-              <div class="ws-metric"><i class="fa-solid fa-check-circle"></i> 103,000+ Records</div>
-              <p class="ws-desc">
-                Engineered automated data cleaning pipeline in Python (Pandas) for 103,000+ ride-hailing records across 20 schema fields. Loaded structured datasets into MySQL, executed relational SQL queries to identify driver cancellation causes and peak booking hours, and delivered an interactive Streamlit executive dashboard.
-              </p>
-            </div>
-            <a href="https://github.com/varungandhi29/OLA-Ride-Insights" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary" style="margin-top: 12px;">
-              <i class="fa-brands fa-github"></i> View Repo
-            </a>
-          </div>
-
-          <div class="workstream-card">
-            <div>
-              <span class="ws-cat">Exploratory Analytics</span>
-              <h4 class="ws-title">FedEx Logistics EDA</h4>
-              <div class="ws-metric"><i class="fa-solid fa-check-circle"></i> 10,324 Records / 21 Charts</div>
-              <p class="ws-desc">
-                Conducted statistical exploratory data analysis on 10,324 global shipment records (33 columns). Generated 21 multi-variable charts using Matplotlib, Seaborn, and Plotly to evaluate transport modes, delivery latency, and freight cost distribution across continents.
-              </p>
-            </div>
-            <a href="https://github.com/varungandhi29/FedEx-Logistics-EDA" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary" style="margin-top: 12px;">
-              <i class="fa-brands fa-github"></i> View Repo
-            </a>
-          </div>
-
-          <div class="workstream-card">
-            <div>
-              <span class="ws-cat">Geospatial Telemetry</span>
-              <h4 class="ws-title">PhonePe Pulse Dashboard</h4>
-              <div class="ws-metric"><i class="fa-solid fa-check-circle"></i> India Choropleth Maps</div>
-              <p class="ws-desc">
-                Extracted and transformed digital transaction telemetry from PhonePe Pulse data repository. Built an interactive Streamlit geospatial application featuring state-level India choropleth maps, multi-year trend filters, and device brand market share breakdown.
-              </p>
-            </div>
-            <a href="https://github.com/varungandhi29/PhonePe_Pulse_Project" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary" style="margin-top: 12px;">
-              <i class="fa-brands fa-github"></i> View Repo
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       GITHUB STATS SECTION
-       ========================================================================== -->
-  <section id="github" class="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-brands fa-github"></i> 05 // GITHUB STATS</span>
-        <h2 class="section-title">Open Source & Activity</h2>
-        <p class="section-subtitle">Real-time telemetry and developer activity synced directly from GitHub @varungandhi29.</p>
-      </div>
-
-      <div class="github-stats-container">
-        
-        <!-- GitHub Stats Card -->
-        <div class="stat-embed-card">
-          <img 
-            src="https://github-readme-stats.vercel.app/api?username=varungandhi29&show_icons=true&theme=dark&bg_color=111111&hide_border=true&title_color=00D4FF&icon_color=00D4FF&text_color=FFFFFF" 
-            alt="Varun Gandhi GitHub Stats" 
-            loading="lazy" 
-          />
-        </div>
-
-        <!-- Top Languages Card -->
-        <div class="stat-embed-card">
-          <img 
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=varungandhi29&layout=compact&theme=dark&bg_color=111111&hide_border=true&title_color=00D4FF&text_color=FFFFFF" 
-            alt="Varun Gandhi Top Languages" 
-            loading="lazy" 
-          />
-        </div>
-
-        <!-- Streak Stats (Full width) -->
-        <div class="stat-embed-card github-full-width">
-          <img 
-            src="https://github-readme-streak-stats.herokuapp.com/?user=varungandhi29&theme=dark&background=111111&hide_border=true&ring=00D4FF&fire=00D4FF&currStreakLabel=00D4FF" 
-            alt="Varun Gandhi GitHub Streak" 
-            loading="lazy" 
-          />
-        </div>
-
-      </div>
-
-      <div class="github-profile-card">
-        <div class="github-info">
-          <i class="fa-brands fa-github github-icon-large"></i>
-          <div>
-            <div class="github-handle">@varungandhi29</div>
-            <div class="github-sub">Explore repositories, cloud security scanners & deception tools</div>
-          </div>
-        </div>
-        <a href="https://github.com/varungandhi29" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <span>Open GitHub Profile</span>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       TECHNICAL WRITEUPS & NOTES
-       ========================================================================== -->
-  <section id="writeups" class="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-book-bookmark"></i> 06 // RESEARCH</span>
-        <h2 class="section-title">Security Writeups & Research Notes</h2>
-        <p class="section-subtitle">Technical writeups detailing privilege escalation evaluation, deception architecture, and authorization defenses.</p>
-      </div>
-
-      <div class="writeups-grid">
-        
-        <div class="writeup-card">
-          <div>
-            <div class="writeup-badge">Cloud Security · MITRE ATT&CK</div>
-            <h3 class="writeup-title">AWS IAM Privilege Escalation Vector Analysis</h3>
-            <p class="writeup-summary">
-              Detailed breakdown of the iam:PassRole + ec2:RunInstances privilege escalation pathway. Analyzed policy evaluation logic and authored automated boto3 detection logic with NetworkX role assumption graph mapping.
-            </p>
-          </div>
-          <a href="#projects" class="project-btn project-btn-secondary">
-            <span>Read Rule Spec</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <div class="writeup-card">
-          <div>
-            <div class="writeup-badge">Deception Architecture</div>
-            <h3 class="writeup-title">Deception Architecture: Telemetry & Fingerprinting</h3>
-            <p class="writeup-summary">
-              Engineering real-time threat deception platforms using visitor fingerprinting (geoip-lite + ua-parser-js), MongoDB payload logging, and dynamic attacker redirection to honeypot profiles.
-            </p>
-          </div>
-          <a href="#projects" class="project-btn project-btn-secondary">
-            <span>Read Arch Note</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <div class="writeup-card">
-          <div>
-            <div class="writeup-badge">Web & API Defense</div>
-            <h3 class="writeup-title">OWASP Top 10 API Security: BOLA & IAM Controls</h3>
-            <p class="writeup-summary">
-              Case study analyzing Broken Object Level Authorization (BOLA) vulnerabilities in modern REST APIs, examining token verification patterns, authorization middleware, and mitigation strategies.
-            </p>
-          </div>
-          <a href="#projects" class="project-btn project-btn-secondary">
-            <span>Read Analysis</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       CONTACT SECTION
-       ========================================================================== -->
-  <section id="contact" class="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> 07 // CONTACT</span>
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Interested in collaborating, discussing cloud security roles, or exploring my projects? Let's connect.</p>
-      </div>
-
-      <div class="contact-grid">
-        
-        <!-- Channels -->
-        <div class="contact-channels">
-          
-          <div class="email-copy-box">
-            <span class="card-title"><i class="fa-solid fa-envelope"></i> Primary Email Channel</span>
-            <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">2006varungandhi@gmail.com</div>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Direct inbox for recruitment inquiries, security projects, and technical discussions.</p>
-            <button class="copy-email-btn" id="copyEmailBtn">
-              <i class="fa-regular fa-copy" id="copyIcon"></i>
-              <span id="copyText">Copy Email Address</span>
-            </button>
-          </div>
-
-          <a href="https://github.com/varungandhi29" target="_blank" rel="noopener noreferrer" class="channel-card">
-            <div class="channel-left">
-              <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
-              <div>
-                <div class="channel-name">GitHub</div>
-                <div class="channel-value">@varungandhi29</div>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square channel-arrow"></i>
-          </a>
-
-          <a href="https://linkedin.com/in/varun-gandhi-348716307" target="_blank" rel="noopener noreferrer" class="channel-card">
-            <div class="channel-left">
-              <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-              <div>
-                <div class="channel-name">LinkedIn</div>
-                <div class="channel-value">in/varun-gandhi-348716307</div>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square channel-arrow"></i>
-          </a>
-
-          <div class="channel-card" style="cursor: default;">
-            <div class="channel-left">
-              <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <div class="channel-name">Location</div>
-                <div class="channel-value">Vadodara, Gujarat, India</div>
-              </div>
-            </div>
-            <span class="badge badge-accent">IST (UTC+5:30)</span>
-          </div>
-
-        </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form-card">
-          <form id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="formName">Your Name *</label>
-                <input type="text" id="formName" class="form-control" placeholder="e.g. Recruiter / Security Lead" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="formEmail">Your Email *</label>
-                <input type="email" id="formEmail" class="form-control" placeholder="name@organization.com" required />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="formSubject">Subject *</label>
-              <input type="text" id="formSubject" class="form-control" placeholder="e.g. Cloud Security Opportunity / Discussion" required />
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="formMessage">Message *</label>
-              <textarea id="formMessage" class="form-control" rows="4" placeholder="Hello Varun, I reviewed your cloud security portfolio..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              <i class="fa-solid fa-paper-plane"></i>
-              <span>Send Message</span>
-            </button>
-            <p class="form-note">Submitting opens a direct prefilled email to 2006varungandhi@gmail.com</p>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-copy">
-        © 2026 Varun Gandhi. All rights reserved.
-      </div>
-
-      <div class="footer-links">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </div>
-
-      <button class="btn-top" id="scrollTopBtn" aria-label="Scroll to top of page">
-        <i class="fa-solid fa-chevron-up"></i>
-      </button>
-    </div>
-  </footer>
-
-  <!-- ==========================================================================
-       VANILLA JAVASCRIPT (Interactive UI, Typing Effect, Animations)
-       ========================================================================== -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-      /* --------------------------------------------------------------------------
-         1. Hero Typing Animation
-         -------------------------------------------------------------------------- */
-      const phrases = [
-        "Cloud Security & AWS IAM Auditing",
-        "Deception Architecture & Honeypot SOC",
-        "Securing Critical Digital Infrastructure",
-        "Automated Cloud Misconfiguration Detection"
-      ];
-      let phraseIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      const typingSpeed = 65;
-      const deletingSpeed = 35;
-      const pauseEnd = 1600;
-      const typingEl = document.querySelector('#hero-typing .typing-text');
-
-      function type() {
-        if (!typingEl) return;
-        const currentPhrase = phrases[phraseIndex];
-
-        if (isDeleting) {
-          typingEl.textContent = currentPhrase.substring(0, charIndex - 1);
-          charIndex--;
-        } else {
-          typingEl.textContent = currentPhrase.substring(0, charIndex + 1);
-          charIndex++;
-        }
-
-        let delta = isDeleting ? deletingSpeed : typingSpeed;
-
-        if (!isDeleting && charIndex === currentPhrase.length) {
-          delta = pauseEnd;
-          isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          delta = 400;
-        }
-
-        setTimeout(type, delta);
-      }
-      type();
-
-      /* --------------------------------------------------------------------------
-         2. Mobile Navigation Toggle
-         -------------------------------------------------------------------------- */
-      const menuToggle = document.getElementById('menuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-      const menuIcon = document.getElementById('menuIcon');
-
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', () => {
-          mobileMenu.classList.toggle('open');
-          const isOpen = mobileMenu.classList.contains('open');
-          menuIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-        });
-
-        document.querySelectorAll('.mobile-link').forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            menuIcon.className = 'fa-solid fa-bars';
-          });
-        });
-      }
-
-      /* --------------------------------------------------------------------------
-         3. Active Navigation Link on Scroll
-         -------------------------------------------------------------------------- */
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.nav-links a');
-
-      function highlightNav() {
-        const scrollY = window.scrollY + 120;
-        sections.forEach(current => {
-          const sectionHeight = current.offsetHeight;
-          const sectionTop = current.offsetTop - 100;
-          const sectionId = current.getAttribute('id');
-          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === `#${sectionId}`) {
-                link.classList.add('active');
-              }
-            });
-          }
-        });
-      }
-      window.addEventListener('scroll', highlightNav);
-
-      /* --------------------------------------------------------------------------
-         4. Intersection Observer for Scroll Fade-In
-         -------------------------------------------------------------------------- */
-      const fadeElements = document.querySelectorAll('.fade-up');
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
-      };
-
-      const fadeObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      fadeElements.forEach(el => fadeObserver.observe(el));
-
-      /* --------------------------------------------------------------------------
-         5. Animated Number Counters
-         -------------------------------------------------------------------------- */
-      const statElements = document.querySelectorAll('.stat-number');
-      let statsCounted = false;
-
-      function runStatsAnimation() {
-        statElements.forEach(stat => {
-          const target = parseInt(stat.getAttribute('data-target'), 10);
-          const duration = 1400;
-          const step = Math.max(1, Math.floor(target / (duration / 25)));
-          let count = 0;
-
-          const timer = setInterval(() => {
-            count += step;
-            if (count >= target) {
-              stat.textContent = target + (target > 5 ? '+' : '');
-              clearInterval(timer);
-            } else {
-              stat.textContent = count + '+';
-            }
-          }, 25);
-        });
-      }
-
-      const statsSection = document.getElementById('about');
-      if (statsSection) {
-        const statsObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting && !statsCounted) {
-              statsCounted = true;
-              runStatsAnimation();
-            }
-          });
-        }, { threshold: 0.2 });
-        statsObserver.observe(statsSection);
-      }
-
-      /* --------------------------------------------------------------------------
-         6. Project Category Filter
-         -------------------------------------------------------------------------- */
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const projectCards = document.querySelectorAll('.project-card');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-
-          const filterValue = btn.getAttribute('data-filter');
-
-          projectCards.forEach(card => {
-            const cardCat = card.getAttribute('data-category');
-            if (filterValue === 'all' || cardCat === filterValue) {
-              card.style.display = 'block';
-              card.style.animation = 'fadeIn 0.4s ease';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-
-      /* --------------------------------------------------------------------------
-         7. Copy Email to Clipboard
-         -------------------------------------------------------------------------- */
-      const copyBtn = document.getElementById('copyEmailBtn');
-      const copyText = document.getElementById('copyText');
-      const copyIcon = document.getElementById('copyIcon');
-      const email = '2006varungandhi@gmail.com';
-
-      if (copyBtn) {
-        copyBtn.addEventListener('click', () => {
-          navigator.clipboard.writeText(email).then(() => {
-            copyText.textContent = 'Copied to Clipboard!';
-            copyIcon.className = 'fa-solid fa-check';
-            copyBtn.style.borderColor = '#10B981';
-            copyBtn.style.color = '#10B981';
-
-            setTimeout(() => {
-              copyText.textContent = 'Copy Email Address';
-              copyIcon.className = 'fa-regular fa-copy';
-              copyBtn.style.borderColor = 'var(--border-subtle)';
-              copyBtn.style.color = 'var(--text-primary)';
-            }, 2500);
-          }).catch(() => {
-            window.location.href = `mailto:${email}`;
-          });
-        });
-      }
-
-      /* --------------------------------------------------------------------------
-         8. Contact Form Mailto Handler
-         -------------------------------------------------------------------------- */
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const name = document.getElementById('formName').value;
-          const userEmail = document.getElementById('formEmail').value;
-          const subject = document.getElementById('formSubject').value;
-          const message = document.getElementById('formMessage').value;
-
-          const mailtoSubject = encodeURIComponent(subject || `Portfolio Inquiry from ${name}`);
-          const mailtoBody = encodeURIComponent(
-            `Name: ${name}\nEmail: ${userEmail}\n\nMessage:\n${message}\n\n---\nSent via Varun Gandhi Portfolio`
-          );
-
-          window.location.href = `mailto:${email}?subject=${mailtoSubject}&body=${mailtoBody}`;
-        });
-      }
-
-      /* --------------------------------------------------------------------------
-         9. Scroll to Top Button
-         -------------------------------------------------------------------------- */
-      const scrollTopBtn = document.getElementById('scrollTopBtn');
-      if (scrollTopBtn) {
-        scrollTopBtn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-
-    });
-  </script>
+<body data-spy="scroll" data-target=".navbar">
+
+	<!-- START: Dot Preloader -->
+	<div id="preloader" class="preloader">
+		<div class="pl">
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__dot"></div>
+			<div class="pl__text">Loading…</div>
+		</div>
+	</div>
+	<!-- END: Dot Preloader -->
+
+	<div class="page-wrapper">
+
+		<!-- START: NAVBAR -->
+		<nav class="navbar navbar-expand-lg navbar-custom navbar-light fixed-top">
+			<div class="container">
+
+				<a class="navbar-brand mr-auto" href="index.html">Varun
+				</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+					aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+					<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="60">
+						<path class="line top"
+							d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+						<path class="line middle" d="m 30,50 h 40" />
+						<path class="line bottom"
+							d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+					</svg>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarToggler">
+					<ul class="navbar-nav ml-auto">
+						<li><a class="nav-link active" href="#home">Home</a></li>
+						<li><a class="nav-link" href="#about">About</a></li>
+						<li><a class="nav-link" href="#social">Connect</a></li>
+						<li><a class="nav-link" href="#services">Skills</a></li>
+						<li><a class="nav-link" href="#resume">Experience</a></li>
+						<li><a class="nav-link" href="#blog">Projects</a></li>
+						<li><a class="nav-link" href="#github">GitHub</a></li>
+						<li><a class="nav-link" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END: NAVBAR -->
+
+		<!-- START: HOME -->
+		<section class="section-home" id="home">
+			<div class="overlay d-flex justify-content-center align-items-center">
+				<div class="overlay-wrap section-head">
+					<span class="mb-2">Hello, I am</span>
+					<h1>Varun Gandhi</h1>
+					<p class="hero-typing-line" id="hero-typing">
+						<span class="hero-typing-text"></span><span class="hero-typing-cursor">|</span>
+					</p>
+					<div class="hero-cta-group mt-4">
+						<a href="#blog" class="btn btn-hero-primary hover-state">View My Work</a>
+						<a href="/assets/resume.pdf" target="_blank" class="btn btn-hero-outline hover-state">Download CV</a>
+						<a href="#contact" class="btn btn-hero-primary hover-state" style="background-color: #039BE5; border-color: #039BE5;"><i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i>Wanna connect?</a>
+					</div>
+				</div>
+			</div>
+			<!-- Scroll-down indicator -->
+			<a href="#about" class="scroll-indicator" aria-label="Scroll down">
+				<div class="scroll-indicator-mouse">
+					<div class="scroll-indicator-wheel"></div>
+				</div>
+				<span class="scroll-indicator-text">Scroll</span>
+			</a>
+		</section>
+		<!-- END: HOME -->
+
+		<!-- START: ABOUT -->
+		<section class="section section-about" id="about">
+			<div class="section-about-wrap">
+				<div class="row justify-content-center align-items-center">
+					<div class="col-md-9">
+						<div class="about-desc">
+							<div class="about-desc-content">
+								<h2>About Me</h2>
+								<p class="mt-3 font-weight-light"><strong>Varun Gandhi</strong> is an aspiring cybersecurity engineer and cloud security specialist from Vadodara, Gujarat, India — Final-year B.Tech IT student at Parul University, graduating in May 2027.</p>
+								<p class="mt-4 font-weight-light">Driven by a deep curiosity for how cloud infrastructure breaks and how to defend it, I have cultivated a pragmatic, hands-on engineering mindset focused on systems execution and real-world security utility. My journey in tech is defined by self-driven building — transforming theoretical security concepts into scalable auditing engines, threat deception platforms, and resilient defense systems.<br><br>
+								My technical specialization centers on <strong>Cloud Security &amp; AWS IAM Auditing</strong>. I design and build tools for automated AWS IAM misconfiguration detection (50 unit tests passing), deception honeypots (HoneyShield v2), and interactive cloud security vulnerability training (CloudSecLab with 100 labs).<br><br>
+								My long-term career focus is dedicated to securing India's critical digital infrastructure across the <strong>fintech, banking, and government sectors</strong>.<br><br>
+								Let’s connect if you’re passionate about cloud defense, IAM security, or building resilient digital systems!</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 d-none d-md-block text-center">
+						<div class="about-photo-circle">
+							<i class="fa-solid fa-shield-halved"></i>
+						</div>
+					</div>
+				</div>
+
+				<!-- Animated Stat Counters -->
+				<div class="row mt-5 about-stats-row">
+					<div class="col-6 col-md-3 text-center wow fadeInUp" data-wow-duration="1.5s">
+						<div class="about-stat-card b-box p-4">
+							<span class="about-stat-number" data-target="50">0</span><span class="about-stat-plus">+</span>
+							<p class="about-stat-label mt-2">IAM Tests Passing</p>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+						<div class="about-stat-card b-box p-4">
+							<span class="about-stat-number" data-target="100">0</span><span class="about-stat-plus">+</span>
+							<p class="about-stat-label mt-2">Hands-on Cloud Labs</p>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+						<div class="about-stat-card b-box p-4">
+							<span class="about-stat-number" data-target="3">0</span><span class="about-stat-plus">+</span>
+							<p class="about-stat-label mt-2">Security Platforms</p>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+						<div class="about-stat-card b-box p-4">
+							<span class="about-stat-number" data-target="103">0</span><span class="about-stat-plus">k+</span>
+							<p class="about-stat-label mt-2">Records Analyzed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: ABOUT -->
+
+		<!-- START: SOCIAL CONNECT -->
+		<section class="section section-dark section-social" id="social">
+			<div class="container">
+				<div class="section-head text-center">
+					<span>Let's Connect</span>
+					<h2>Find Me Online</h2>
+				</div>
+				<div class="social-cards-row mt-5 d-flex justify-content-center flex-wrap">
+
+					<a href="https://linkedin.com/in/varun-gandhi-348716307" target="_blank" class="social-card wow fadeInUp"
+						data-wow-duration="1.5s" style="--accent: #0A66C2;">
+						<div class="social-card-icon"><i class="fab fa-linkedin-in"></i></div>
+						<span class="social-card-name">LinkedIn</span>
+						<div class="social-card-detail">
+							<span class="social-card-handle">Varun Gandhi</span>
+							<span class="social-card-stat">Connect</span>
+						</div>
+					</a>
+
+					<a href="https://github.com/varungandhi29" target="_blank" class="social-card wow fadeInUp"
+						data-wow-duration="1.5s" data-wow-delay=".05s" style="--accent: #f0f6fc;">
+						<div class="social-card-icon"><i class="fab fa-github"></i></div>
+						<span class="social-card-name">GitHub</span>
+						<div class="social-card-detail">
+							<span class="social-card-handle">@varungandhi29</span>
+							<span class="social-card-stat">Open Source</span>
+						</div>
+					</a>
+
+					<a href="mailto:2006varungandhi@gmail.com" class="social-card wow fadeInUp"
+						data-wow-duration="1.5s" data-wow-delay=".1s" style="--accent: #039BE5;">
+						<div class="social-card-icon"><i class="fas fa-envelope"></i></div>
+						<span class="social-card-name">Email</span>
+						<div class="social-card-detail">
+							<span class="social-card-handle">2006varungandhi@gmail.com</span>
+							<span class="social-card-stat">Direct Inbox</span>
+						</div>
+					</a>
+
+					<a href="/assets/resume.pdf" target="_blank" class="social-card wow fadeInUp"
+						data-wow-duration="1.5s" data-wow-delay=".15s" style="--accent: #10B981;">
+						<div class="social-card-icon"><i class="fa-solid fa-file-pdf"></i></div>
+						<span class="social-card-name">Resume</span>
+						<div class="social-card-detail">
+							<span class="social-card-handle">Official PDF</span>
+							<span class="social-card-stat">Download</span>
+						</div>
+					</a>
+
+				</div>
+			</div>
+		</section>
+		<!-- END: SOCIAL CONNECT -->
+
+		<!-- START: CERTIFICATIONS -->
+		<section class="section section-dark section-certifications" id="certifications">
+			<div class="container">
+				<div class="section-head">
+					<span>Credentials & Focus</span>
+					<h2>Key Competencies & Specializations</h2>
+				</div>
+
+				<div class="row mt-4 justify-content-center">
+					<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+						<div class="cert-card b-box p-4 text-center wow fadeInUp" data-wow-duration="1.5s">
+							<div class="cert-card-icon">
+								<i class="fa-brands fa-aws" style="color: #FF9900;"></i>
+							</div>
+							<h6 class="cert-card-title mt-3">AWS Cloud Security</h6>
+							<p class="cert-card-subtitle">IAM Policy & Trust Evaluation</p>
+							<a href="#projects" class="cert-card-link">View Scanner →</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+						<div class="cert-card b-box p-4 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+							<div class="cert-card-icon">
+								<i class="fa-solid fa-shield-virus" style="color: #00D4FF;"></i>
+							</div>
+							<h6 class="cert-card-title mt-3">Deception Systems</h6>
+							<p class="cert-card-subtitle">Honeypots & Attacker Telemetry</p>
+							<a href="#projects" class="cert-card-link">View HoneyShield →</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+						<div class="cert-card b-box p-4 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+							<div class="cert-card-icon">
+								<i class="fa-solid fa-graduation-cap" style="color: #4CAF50;"></i>
+							</div>
+							<h6 class="cert-card-title mt-3">B.Tech IT '27</h6>
+							<p class="cert-card-subtitle">Parul University, Vadodara</p>
+							<a href="#resume" class="cert-card-link">View Academics →</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+						<div class="cert-card b-box p-4 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+							<div class="cert-card-icon">
+								<i class="fa-solid fa-flask" style="color: #E91E63;"></i>
+							</div>
+							<h6 class="cert-card-title mt-3">CloudSecLab Labs</h6>
+							<p class="cert-card-subtitle">100 Hands-on Vulnerability Labs</p>
+							<a href="https://cloudseclab.vercel.app" target="_blank" class="cert-card-link">Explore Platform →</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: CERTIFICATIONS -->
+
+		<!-- START: SERVICES / SKILLS -->
+		<section class="section section-services" id="services">
+			<div class="container">
+				<div class="section-head">
+					<span>WHAT I DO</span>
+					<h2>Skills</h2>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-sm-6 col-md-4">
+						<div class="services-flip wow fadeInUp" data-wow-duration="1.5s">
+							<div class="services-list">
+								<div class="services-list-front services-list-1">
+									<div class="flip-content">
+										<h5 class="mb-0">Cloud Security & IAM</h5>
+									</div>
+								</div>
+								<div class="services-list-back">
+									<div class="flip-content">
+										<div class="services-list-icon">
+											<i class="fa-solid fa-cloud"></i>
+										</div>
+										<div class="mt-4">
+											<h5 class="mb-0">Cloud Security & IAM</h5>
+											<p class="mt-3">AWS IAM misconfiguration auditing, wildcard permission detection, privilege escalation graphs, and automated Terraform HCL remediation.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4">
+						<div class="services-flip wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+							<div class="services-list">
+								<div class="services-list-front services-list-2">
+									<div class="flip-content">
+										<h5 class="mb-0">Deception Systems</h5>
+									</div>
+								</div>
+								<div class="services-list-back">
+									<div class="flip-content">
+										<div class="services-list-icon">
+											<i class="fa-solid fa-shield-virus"></i>
+										</div>
+										<div class="mt-4">
+											<h5 class="mb-0">Deception Systems</h5>
+											<p class="mt-3">HoneyShield v2 dual-system honeypots, real-time attacker telemetry, AI behavioral risk scoring, and browser fingerprint blocking.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4">
+						<div class="services-flip wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
+							<div class="services-list">
+								<div class="services-list-front services-list-3">
+									<div class="flip-content">
+										<h5 class="mb-0">Python & Backend</h5>
+									</div>
+								</div>
+								<div class="services-list-back">
+									<div class="flip-content">
+										<div class="services-list-icon">
+											<i class="fa-solid fa-server"></i>
+										</div>
+										<div class="mt-4">
+											<h5 class="mb-0">Python & Backend</h5>
+											<p class="mt-3">FastAPI, Python boto3, Node.js, Express, Socket.io real-time websockets, Redis caching, and MongoDB data pipelines.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4">
+						<div class="services-flip wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
+							<div class="services-list">
+								<div class="services-list-front services-list-4">
+									<div class="flip-content">
+										<h5 class="mb-0">Cloud Emulation</h5>
+									</div>
+								</div>
+								<div class="services-list-back">
+									<div class="flip-content">
+										<div class="services-list-icon">
+											<i class="fa-solid fa-cubes"></i>
+										</div>
+										<div class="mt-4">
+											<h5 class="mb-0">Cloud Emulation</h5>
+											<p class="mt-3">LocalStack mock AWS environments, Docker containerization, multi-cloud testing across AWS, Azure, and GCP sandboxes.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4">
+						<div class="services-flip wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
+							<div class="services-list">
+								<div class="services-list-front services-list-5">
+									<div class="flip-content">
+										<h5 class="mb-0">Threat Analytics</h5>
+									</div>
+								</div>
+								<div class="services-list-back">
+									<div class="flip-content">
+										<div class="services-list-icon">
+											<i class="fa-solid fa-chart-line"></i>
+										</div>
+										<div class="mt-4">
+											<h5 class="mb-0">Threat Analytics</h5>
+											<p class="mt-3">Data engineering in Pandas/MySQL, 103,000+ ride records analyzed, Random Forest behavioral modeling, and 3D Three.js telemetry.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4">
+						<div class="services-flip wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
+							<div class="services-list">
+								<div class="services-list-front services-list-6">
+									<div class="flip-content">
+										<h5 class="mb-0">Security Auditing</h5>
+									</div>
+								</div>
+								<div class="services-list-back">
+									<div class="flip-content">
+										<div class="services-list-icon">
+											<i class="fa-solid fa-lock"></i>
+										</div>
+										<div class="mt-4">
+											<h5 class="mb-0">Security Auditing</h5>
+											<p class="mt-3">MITRE ATT&CK framework mapping, NetworkX escalation graphs, OWASP Top 10 API verification, Burp Suite, and Wireshark.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: SERVICES -->
+
+		<!-- START: RESUME (EDUCATION & EXPERIENCE) -->
+		<section class="section section-dark section-resume" id="resume">
+			<div class="container">
+				<div class="section-head">
+					<span>My Resume</span>
+					<h2>Education & Experience</h2>
+				</div>
+
+				<div class="row mt-4">
+					<!-- Education -->
+					<div class="col-sm-6 col-lg-6">
+						<h5 class="section-subHead mt-3">My Education</h5>
+						<div class="resume-list b-box hover-state p-4 mt-4 wow fadeInUp" data-wow-duration="1.5s">
+							<div>
+								<h5>B.Tech in Information Technology</h5>
+								<h6 class="badge badge-dark d-inline-block my-3">Parul University, Vadodara | 2023 - 2027</h6>
+								<p>Final-year undergraduate student graduating May 2027. Specializing in practical systems defense, automated cloud security tooling, and infrastructure auditing. Combining academic computer science rigor with active open-source security tool development.</p>
+							</div>
+						</div>
+
+						<div class="resume-list b-box hover-state p-4 mt-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+							<div>
+								<h5>Higher Secondary Certificate (Science & IT)</h5>
+								<h6 class="badge badge-dark d-inline-block my-3">Gujarat Secondary Board | 2021 - 2023</h6>
+								<p>Built foundational mastery in mathematics, algorithmic problem solving, and computer science fundamentals that form the core of my distributed systems analysis today.</p>
+							</div>
+						</div>
+
+						<h5 class="section-subHead mt-5">Core Tooling & Security Badges</h5>
+						<div class="resume-list b-box hover-state p-4 mt-3">
+							<div class="skill-tag-container">
+								<span class="skill-tag">Python</span>
+								<span class="skill-tag">AWS IAM</span>
+								<span class="skill-tag">FastAPI</span>
+								<span class="skill-tag">React</span>
+								<span class="skill-tag">Node.js</span>
+								<span class="skill-tag">Docker</span>
+								<span class="skill-tag">LocalStack</span>
+								<span class="skill-tag">Terraform</span>
+								<span class="skill-tag">MongoDB</span>
+								<span class="skill-tag">Redis</span>
+								<span class="skill-tag">Socket.io</span>
+								<span class="skill-tag">NetworkX</span>
+								<span class="skill-tag">Burp Suite</span>
+								<span class="skill-tag">Wireshark</span>
+								<span class="skill-tag">Nmap</span>
+								<span class="skill-tag">MITRE ATT&CK</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Experience -->
+					<div class="col-sm-6 col-lg-6">
+						<h5 class="section-subHead mt-3">My Experience</h5>
+						
+						<div class="resume-list b-box hover-state p-4 mt-4 wow fadeInUp" data-wow-duration="1.5s">
+							<div>
+								<h5>Data Analyst Intern — Innovexis</h5>
+								<h6 class="badge badge-dark d-inline-block my-3">7th Semester Internship | Innovexis</h6>
+								<p><strong>OLA Ride Insights:</strong> Engineered automated data cleaning pipeline in Python (Pandas) for 103,000+ ride records across 20 schema fields. Loaded structured datasets into MySQL, executed relational SQL queries to identify driver cancellation causes, and delivered an interactive Streamlit executive dashboard.</p>
+							</div>
+						</div>
+
+						<div class="resume-list b-box hover-state p-4 mt-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+							<div>
+								<h5>FedEx Logistics EDA Workstream</h5>
+								<h6 class="badge badge-dark d-inline-block my-3">Innovexis Data Analytics Project</h6>
+								<p>Conducted statistical exploratory data analysis on 10,324 global shipment records (33 columns). Generated 21 multi-variable charts using Matplotlib, Seaborn, and Plotly to evaluate transport modes, delivery latency, and freight cost distribution across continents.</p>
+							</div>
+						</div>
+
+						<div class="resume-list b-box hover-state p-4 mt-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+							<div>
+								<h5>PhonePe Pulse Geospatial Dashboard</h5>
+								<h6 class="badge badge-dark d-inline-block my-3">Innovexis Data Analytics Project</h6>
+								<p>Extracted and transformed digital transaction telemetry from PhonePe Pulse data repository. Built an interactive Streamlit geospatial application featuring state-level India choropleth maps, multi-year trend filters, and device brand market share breakdown.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: RESUME -->
+
+		<!-- START: PROJECTS -->
+		<section class="section section-light section-blog" id="blog">
+			<div class="container">
+				<div class="section-head">
+					<span>Achievements</span>
+					<h2>My Projects</h2>
+				</div>
+
+				<div class="mt-4">
+					<div class="row">
+
+						<!-- Project 1: HoneyShield v2 -->
+						<div class="col-lg-4 col-md-6 mb-4">
+							<div class="project-card-custom wow fadeInUp" data-wow-duration="1.5s">
+								<div class="d-flex justify-content-between align-items-center mb-3">
+									<span class="badge badge-dark">Deception Systems</span>
+									<span class="text-success small font-weight-bold"><i class="fa-solid fa-circle"></i> Live Demo</span>
+								</div>
+								<h4 class="text-white mb-2 font-weight-bold">HoneyShield v2</h4>
+								<h6 class="text-primary mb-3">Dual-System Honeypot SOC Dashboard</h6>
+								<p class="text-muted small">
+									Deception-based SOC dashboard with dual-system honeypot architecture. Real-time attack detection, AI behavioral scoring, browser fingerprint blocking, and silent attacker redirection via Bridge Layer.
+								</p>
+								<div class="mb-3">
+									<span class="tech-pill">React</span>
+									<span class="tech-pill">Node.js</span>
+									<span class="tech-pill">Python</span>
+									<span class="tech-pill">MongoDB</span>
+									<span class="tech-pill">Redis</span>
+									<span class="tech-pill">Socket.io</span>
+									<span class="tech-pill">Random Forest</span>
+								</div>
+								<div class="d-flex gap-2 pt-2 border-top border-secondary">
+									<a href="https://honeyprofile.vercel.app" target="_blank" class="btn btn-sm btn-primary mr-2" style="background:#039BE5; border-color:#039BE5;">
+										<i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Live Demo
+									</a>
+									<a href="https://github.com/varungandhi29/Honey-Profile-Project" target="_blank" class="btn btn-sm btn-outline-light">
+										<i class="fa-brands fa-github mr-1"></i> GitHub
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 2: IAM Misconfiguration Scanner -->
+						<div class="col-lg-4 col-md-6 mb-4">
+							<div class="project-card-custom wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+								<div class="d-flex justify-content-between align-items-center mb-3">
+									<span class="badge badge-dark">Cloud Security</span>
+									<span class="text-info small font-weight-bold"><i class="fa-solid fa-check-circle"></i> 50 Tests Passing</span>
+								</div>
+								<h4 class="text-white mb-2 font-weight-bold">IAM Misconfiguration Scanner</h4>
+								<h6 class="text-primary mb-3">Automated AWS Risk Assessment Engine</h6>
+								<p class="text-muted small">
+									Cloud security audit tool scanning AWS IAM for misconfigurations. 50 tests passing. Detects wildcard permissions, privilege escalation paths, MFA gaps, and generates Terraform HCL remediation code.
+								</p>
+								<div class="mb-3">
+									<span class="tech-pill">Python</span>
+									<span class="tech-pill">FastAPI</span>
+									<span class="tech-pill">React</span>
+									<span class="tech-pill">LocalStack</span>
+									<span class="tech-pill">networkx</span>
+									<span class="tech-pill">PyVis</span>
+									<span class="tech-pill">ReportLab</span>
+								</div>
+								<div class="d-flex gap-2 pt-2 border-top border-secondary">
+									<a href="https://github.com/varungandhi29/iam-misconfiguration-scanner" target="_blank" class="btn btn-sm btn-primary mr-2" style="background:#039BE5; border-color:#039BE5;">
+										<i class="fa-brands fa-github mr-1"></i> View Repo
+									</a>
+									<span class="btn btn-sm btn-outline-secondary disabled" style="opacity: 0.6;">
+										CLI Tool
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 3: CloudSecLab -->
+						<div class="col-lg-4 col-md-6 mb-4">
+							<div class="project-card-custom wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+								<div class="d-flex justify-content-between align-items-center mb-3">
+									<span class="badge badge-dark">Security Learning</span>
+									<span class="text-success small font-weight-bold"><i class="fa-solid fa-circle"></i> 100 Labs</span>
+								</div>
+								<h4 class="text-white mb-2 font-weight-bold">CloudSecLab</h4>
+								<h6 class="text-primary mb-3">TryHackMe-Style Cloud Platform</h6>
+								<p class="text-muted small">
+									TryHackMe-style cloud security learning platform with 100 hands-on labs covering AWS, Azure, and GCP. Real LocalStack emulation, 4 verifiable certificates, timed exams.
+								</p>
+								<div class="mb-3">
+									<span class="tech-pill">React</span>
+									<span class="tech-pill">FastAPI</span>
+									<span class="tech-pill">PostgreSQL</span>
+									<span class="tech-pill">Redis</span>
+									<span class="tech-pill">LocalStack</span>
+									<span class="tech-pill">JWT</span>
+									<span class="tech-pill">ReportLab</span>
+								</div>
+								<div class="d-flex gap-2 pt-2 border-top border-secondary">
+									<a href="https://cloudseclab.vercel.app" target="_blank" class="btn btn-sm btn-primary mr-2" style="background:#039BE5; border-color:#039BE5;">
+										<i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Live Demo
+									</a>
+									<a href="https://github.com/varungandhi29/CloudSecLab" target="_blank" class="btn btn-sm btn-outline-light">
+										<i class="fa-brands fa-github mr-1"></i> GitHub
+									</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: PROJECTS -->
+
+		<!-- START: GITHUB STATS -->
+		<section class="section section-dark" id="github">
+			<div class="container">
+				<div class="section-head text-center">
+					<span>Telemetry & Activity</span>
+					<h2>GitHub Activity</h2>
+				</div>
+
+				<div class="github-stats-row">
+					<div class="github-stats-card wow fadeInUp" data-wow-duration="1.5s">
+						<img src="https://github-readme-stats.vercel.app/api?username=varungandhi29&show_icons=true&theme=tokyonight&hide_border=true&bg_color=191919&title_color=039BE5&icon_color=039BE5&text_color=FFFFFF" alt="Varun Gandhi GitHub Stats" loading="lazy">
+					</div>
+					<div class="github-stats-card wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+						<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=varungandhi29&layout=compact&theme=tokyonight&hide_border=true&bg_color=191919&title_color=039BE5&text_color=FFFFFF" alt="Varun Gandhi Top Languages" loading="lazy">
+					</div>
+					<div class="github-stats-card w-100 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+						<img src="https://github-readme-streak-stats.herokuapp.com/?user=varungandhi29&theme=tokyonight&hide_border=true&background=191919&ring=039BE5&fire=039BE5&currStreakLabel=039BE5" alt="Varun Gandhi GitHub Streak" loading="lazy">
+					</div>
+				</div>
+
+				<div class="text-center mt-4">
+					<a href="https://github.com/varungandhi29" target="_blank" class="btn btn-hero-outline hover-state">
+						<i class="fa-brands fa-github mr-2"></i> Visit GitHub Profile @varungandhi29
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- END: GITHUB STATS -->
+
+		<!-- START: CTA -->
+		<section class="section section-freelance section-light text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-head wow fadeInUp" data-wow-duration="1.5s">
+							<h2>Let's work together!</h2>
+						</div>
+						<div class="mt-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+							<a href="/assets/resume.pdf" target="_blank" class="btn btn-outline hover-state">Here's my CV</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: CTA -->
+
+		<!-- START: CONTACT -->
+		<section class="section section-dark section-contact" id="contact">
+			<div class="container">
+				<div class="section-head">
+					<span>Reach out to me</span>
+					<h2>Contact</h2>
+				</div>
+
+				<!-- Map -->
+				<div class="contact-map mt-5">
+					<h5 class="section-subHead mb-4">My Location</h5>
+					<div class="contact-map--container b-box wow fadeInUp" data-wow-duration="1.5s"
+						style="border-radius: 12px; overflow: hidden;">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118141.05537554907!2d73.10304562476742!3d22.32239401736691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sin!4v1714041000000!5m2!1sen!2sin"
+							width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-Otherdetails">
+				<div class="container">
+					<div class="contact-details">
+						<h5 class="section-subHead pt-5 mb-4">Get in Touch</h5>
+						<div class="row">
+							<div class="col-md-4 col-lg-4">
+								<div class="contact-details--panel p-4 b-box text-center hover-state wow fadeInUp" data-wow-duration="1.5s">
+									<div class="mb-4">
+										<i class="fa-brands fa-github fa-2x text-info"></i>
+									</div>
+									<div class="mt-2">
+										<a href="https://github.com/varungandhi29" target="_blank">@varungandhi29</a>
+										<p class="mt-1 font-weight-bold">Open Source</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-lg-4">
+								<div class="contact-details--panel p-4 b-box text-center hover-state wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+									<div class="mb-4">
+										<i class="fa-brands fa-linkedin-in fa-2x text-primary"></i>
+									</div>
+									<div class="mt-2">
+										<a href="https://linkedin.com/in/varun-gandhi-348716307" target="_blank">Varun Gandhi</a>
+										<p class="mt-1 font-weight-bold">Connect on LinkedIn</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-lg-4">
+								<div class="contact-details--panel p-4 b-box text-center hover-state wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+									<div class="mb-4">
+										<i class="fas fa-envelope fa-2x text-success"></i>
+									</div>
+									<div class="mt-2">
+										<a href="mailto:2006varungandhi@gmail.com">2006varungandhi@gmail.com</a>
+										<p class="mt-1 font-weight-bold">Email Me</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="contact-form mt-5">
+						<form id="contactForm">
+							<h5 class="section-subHead mb-2">Contact Form</h5>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s">
+										<input name="name" id="name" type="text" class="form-control b-box" placeholder="Your Name *" required>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+										<input name="email" id="email" type="email" class="form-control b-box" placeholder="Your Email *" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+										<input type="text" name="subject" class="form-control b-box" id="subject" placeholder="Your Subject *" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+										<textarea name="comments" id="comments" rows="4" class="form-control b-box" placeholder="Your message..." required></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12 mt-4 mb-5 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
+									<button type="submit" class="submitBnt btn hover-state">Send Message</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- END: CONTACT -->
+
+		<!-- START: FOOTER -->
+		<footer class="footer section section-light">
+			<div class="container">
+				<p class="copyright text-center mb-0">&copy; 2026 <a href="index.html">All rights reserved</a> | This website is developed by <a href="#home">Varun Gandhi</a></p>
+			</div>
+		</footer>
+		<!-- END: FOOTER -->
+
+	</div>
+
+	<!-- ============ JAVASCRIPTS ============ -->
+	<script src="js/vendor.js" defer></script>
+	<script src="js/custom.js" defer></script>
+
+	<script>
+		// Contact form submission via mailto
+		document.addEventListener('DOMContentLoaded', function() {
+			var form = document.getElementById('contactForm');
+			if (form) {
+				form.addEventListener('submit', function(e) {
+					e.preventDefault();
+					var name = document.getElementById('name').value;
+					var userEmail = document.getElementById('email').value;
+					var subject = document.getElementById('subject').value;
+					var comments = document.getElementById('comments').value;
+					var body = 'Name: ' + name + '\nEmail: ' + userEmail + '\n\nMessage:\n' + comments;
+					window.location.href = 'mailto:2006varungandhi@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+				});
+			}
+		});
+	</script>
 </body>
+
 </html>

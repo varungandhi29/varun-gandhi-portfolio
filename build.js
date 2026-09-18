@@ -14,4 +14,11 @@ if (fs.existsSync('public')) {
   fs.cpSync('public', 'dist', { recursive: true });
 }
 
-console.log('Build completed successfully: index.html and public/ assets copied to dist/');
+// Copy css and js directories to dist
+for (const dir of ['css', 'js']) {
+  if (fs.existsSync(dir)) {
+    fs.cpSync(dir, path.join('dist', dir), { recursive: true });
+  }
+}
+
+console.log('Build completed successfully: index.html, public/, css/, and js/ copied to dist/');
